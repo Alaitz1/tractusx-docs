@@ -1,6 +1,6 @@
 # Tractus-X Docs 
 
-Pequeña app Flask que **indexa** la documentación de los repos de una organización de GitHub y la muestra en un **árbol navegable** con visor Markdown (incluye Mermaid).  
+Pequeña web Flask que **indexa** la documentación de los repos de una organización de GitHub y la muestra en un **árbol navegable** con visor Markdown (incluye Mermaid).  
 En el primer uso, si quieres actualizar la docuementación deberas ir a **`/admin`** y poner tu **token personal de GitHub** para que la app pueda llamar a la API sin límites.
 
 ---
@@ -84,7 +84,6 @@ La API de GitHub **limita** fuertemente las llamadas anónimas. Para evitar erro
 
 - El token introducido en `/admin` **no se persiste**.  
 - Si necesitas proteger `/run`, define `ADMIN_SECRET`.  
-- Para despliegue público, pon la app detrás de un proxy con autenticación (p. ej., ingress con auth).
 
 ---
 
