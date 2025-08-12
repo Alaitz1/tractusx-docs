@@ -35,7 +35,7 @@ En el primer uso, es posible que tengas que entrar en **`/admin`** y poner tu **
 
 ```bash
 
-# ) Instalar dependencias
+# 1) Instalar dependencias
 pip install flask
 
 # 2) Exportar variables (ejemplos)
