@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Índice de documentación — Tractus-X</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:2rem;background:#0b1020;color:#e5e7eb}
+h1{margin-bottom:1rem}
+.repo{margin:0 0 1.25rem;padding:1rem;border:1px solid #243148;border-radius:12px;background:#12182c}
+a{color:#8ab4f8;text-decoration:none}a:hover{text-decoration:underline}
+ul{margin:.25rem 0 .75rem 1.25rem}
+small{color:#a3a3a3}
+.badge{display:inline-block;border:1px solid #243148;border-radius:8px;padding:.1rem .5rem;margin-left:.5rem;color:#cbd5e1;background:#0b1020}
+#q{background:#0b1020;border:1px solid #243148;border-radius:8px;padding:.5rem .75rem;color:#e5e7eb;width:100%;max-width:480px}
+.group{margin:.5rem 0 .25rem;font-weight:600;color:#e2e8f0}
+.file{font-size:.95rem}
+.btn{border:1px solid #243148;border-radius:8px;background:#0b1020;color:#e5e7eb;padding:.15rem .4rem;cursor:pointer}
+ul.tree{list-style:none;margin:.25rem 0 .25rem .25rem;padding-left:.5rem}
+li.dir{margin:.15rem 0}
+li.file{margin:.1rem 0}
+.header{display:flex;align-items:center;gap:.35rem}
+</style>
+<h1>Índice de documentación — Tractus-X</h1>
+<p><small>Org: eclipse-tractusx. Generado en modo rápido.</small></p>
+<input id="q" type="search" placeholder="Filtrar por repo, carpeta o fichero…" autocomplete="off"/>
+<div id="list"></div>
+<script>
+(async () => {
+  const res = await fetch('tree.json');
+  const tree = await res.json();
+  const listEl = document.getElementById('list');
+  const q = document.getElementById('q');
+
+
+  function buildTree(paths) {
+    const root = { dirs: {}, files: [] };
+    for (const p of paths) {
+      const parts = p.split('/');
+      let node = root;
+      for (let i = 0; i < parts.length; i++) {
+        const part = parts[i];
+        const isFile = i === parts.length - 1;
+        if (isFile) {
+          node.files.push({ name: part, full: p });
+        } else {
+          node.dirs[part] = node.dirs[part] || { dirs: {}, files: [] };
+          node = node.dirs[part];
+        }
+      }
+    }
+    return root;
+  }
+
+  // Crea enlaces respetando .md/.mdx con visor local
+  function linkFor(org, repo, branch, fullPath) {
+   const fileParam =
+    `/raw/${encodeURIComponent(org)}` +
+    `/${encodeURIComponent(repo)}` +
+    `/${encodeURIComponent(branch)}` +
+    `/${encodeURI(fullPath)}`;
+    if (/\.(md|mdx)$/i.test(fullPath)) {
+      return `viewer.html?file=${fileParam}`;
+    }
+    return `https://github.com/${encodeURIComponent(org)}/${encodeURIComponent(repo)}/blob/${encodeURIComponent(branch)}/${encodeURI(fullPath)}`;
+  }
+
+  // Render recursivo (directorios expandibles)
+  function renderNode(org, repo, branch, node, basePath, needle = '') {
+    const container = document.createElement('ul');
+    container.className = 'tree';
+
+    // Directorios
+    const dirNames = Object.keys(node.dirs).sort();
+    for (const d of dirNames) {
+      const path = basePath ? basePath + '/' + d : d;
+      const sub = node.dirs[d];
+      const subEl = renderNode(org, repo, branch, sub, path, needle);
+      const hasChildren = subEl.childElementCount > 0;
+
+      const dirMatches = !needle || d.toLowerCase().includes(needle) || hasChildren;
+      if (!dirMatches) continue;
+
+      const li = document.createElement('li');
+      li.className = 'dir';
+
+      const toggle = document.createElement('button');
+      toggle.textContent = '▸';
+      toggle.className = 'btn';
+      toggle.setAttribute('aria-label','toggle');
+
+      const label = document.createElement('span');
+      label.textContent = d;
+      label.style.fontWeight = '600';
+
+      const header = document.createElement('div');
+      header.className = 'header';
+      header.appendChild(toggle);
+      header.appendChild(label);
+
+      const childrenWrap = document.createElement('div');
+      childrenWrap.style.display = 'none';
+      childrenWrap.appendChild(subEl);
+
+      toggle.addEventListener('click', () => {
+        const open = childrenWrap.style.display !== 'none';
+        childrenWrap.style.display = open ? 'none' : 'block';
+        toggle.textContent = open ? '▸' : '▾';
+      });
+
+      li.appendChild(header);
+      li.appendChild(childrenWrap);
+      container.appendChild(li);
+    }
+
+    // Archivos
+    for (const f of node.files.sort((a,b)=>a.name.localeCompare(b.name))) {
+      const show = !needle || f.name.toLowerCase().includes(needle) || f.full.toLowerCase().includes(needle);
+      if (!show) continue;
+      const li = document.createElement('li');
+      li.className = 'file';
+      const a = document.createElement('a');
+      a.href = linkFor("eclipse-tractusx", repo, branch, f.full);
+      a.target = '_blank';
+      a.rel = 'noreferrer';
+      a.textContent = f.name;
+      li.appendChild(a);
+      container.appendChild(li);
+    }
+    return container;
+  }
+
+  function render(filter = '') {
+    const needle = filter.trim().toLowerCase();
+    listEl.innerHTML = '';
+
+    for (const repo of Object.keys(tree).sort()) {
+      const entry = tree[repo] || {};
+      const branch = entry.branch || 'main';
+      const paths = entry.paths || [];
+
+      const repoMatches = !needle || repo.toLowerCase().includes(needle);
+      if (!repoMatches) continue;
+      if (!paths.length) continue;
+
+      const div = document.createElement('div');
+      div.className = 'repo';
+      div.innerHTML = `<h2>${repo}<span class="badge">${branch}</span></h2>`;
+
+
+        const root = buildTree(paths);
+        const treeEl = renderNode("eclipse-tractusx", repo, branch, root, '', '');
+        div.appendChild(treeEl);
+
+
+      listEl.appendChild(div);
+    }
+  }
+
+  q.addEventListener('input', () => render(q.value));
+  render();
+})();
+</script>
+</html>
