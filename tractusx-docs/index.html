@@ -4,27 +4,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Índice de documentación — Tractus-X</title>
 <style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:2rem;background:#0b1020;color:#e5e7eb}
+:root{
+    --bg:#0b1020; --fg:#e5e7eb; --link:#8ab4f8; --border:#243148; --card:#12182c; --muted:#a3a3a3; --badge:#0b1020; --codebg:#0f172a;
+}
+:root[data-theme="light"]{
+    --bg:#ffffff; --fg:#0f172a; --link:#1a56db; --border:#e5e7eb; --card:#f8fafc; --muted:#6b7280; --badge:#f1f5f9; --codebg:#f3f4f6;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:2rem;background:var(--bg);color:var(--fg)}
 h1{margin-bottom:1rem}
-.repo{margin:0 0 1.25rem;padding:1rem;border:1px solid #243148;border-radius:12px;background:#12182c}
-a{color:#8ab4f8;text-decoration:none}a:hover{text-decoration:underline}
+.repo{margin:0 0 1.25rem;padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--card)}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
 ul{margin:.25rem 0 .75rem 1.25rem}
-small{color:#a3a3a3}
-.badge{display:inline-block;border:1px solid #243148;border-radius:8px;padding:.1rem .5rem;margin-left:.5rem;color:#cbd5e1;background:#0b1020}
-#q{background:#0b1020;border:1px solid #243148;border-radius:8px;padding:.5rem .75rem;color:#e5e7eb;width:100%;max-width:480px}
+small{color:var(--muted)}
+.badge{display:inline-block;border:1px solid var(--border);border-radius:8px;padding:.1rem .5rem;margin-left:.5rem;color:#334155;background:var(--badge)}
+#q{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.5rem .75rem;color:var(--fg);width:100%;max-width:480px; margin:0 0 1.25rem}
 .group{margin:.5rem 0 .25rem;font-weight:600;color:#e2e8f0}
 .file{font-size:.95rem}
-.btn{border:1px solid #243148;border-radius:8px;background:#0b1020;color:#e5e7eb;padding:.15rem .4rem;cursor:pointer}
+.btn{border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);padding:.15rem .4rem;cursor:pointer}
 ul.tree{list-style:none;margin:.25rem 0 .25rem .25rem;padding-left:.5rem}
 li.dir{margin:.15rem 0}
 li.file{margin:.1rem 0}
 .header{display:flex;align-items:center;gap:.35rem}
+#themeToggle{
+    position:fixed; top:16px; right:16px; z-index:10;
+  border:1px solid var(--border); background:var(--bg); color:var(--link);
+  border-radius:10px; padding:.45rem .7rem; cursor:pointer;
+}
 </style>
-<h1>Índice de documentación — Tractus-X</h1>
+<h1>Índice de documentación — Tractus-X</h1> <button id="themeToggle" aria-label="Cambiar tema">☀️ Modo blanco</button>
+
 <p><small>Org: eclipse-tractusx. Generado en modo rápido.</small></p>
 <input id="q" type="search" placeholder="Filtrar por repo, carpeta o fichero…" autocomplete="off"/>
 <div id="list"></div>
 <script>
+const applyTheme = (t) => document.documentElement.setAttribute('data-theme', t);
+const saved = localStorage.getItem('theme') || 'dark';
+applyTheme(saved);
+const btn = document.getElementById('themeToggle');
+const updateBtn = () => { btn.textContent = (document.documentElement.getAttribute('data-theme')==='light') ? '🌙 Modo oscuro' : '☀️ Modo blanco'; };
+updateBtn();
+btn.onclick = () => {
+    const now = document.documentElement.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+  applyTheme(now); localStorage.setItem('theme', now); updateBtn();
+};
 (async () => {
   const res = await fetch('tree.json');
   const tree = await res.json();
@@ -53,11 +77,12 @@ li.file{margin:.1rem 0}
 
   // Crea enlaces respetando .md/.mdx con visor local
   function linkFor(org, repo, branch, fullPath) {
+   const encPath = fullPath.split('/').map(encodeURIComponent).join('/');
    const fileParam =
     `/raw/${encodeURIComponent(org)}` +
     `/${encodeURIComponent(repo)}` +
     `/${encodeURIComponent(branch)}` +
-    `/${encodeURI(fullPath)}`;
+    `/${encPath}`;
     if (/\.(md|mdx)$/i.test(fullPath)) {
       return `viewer.html?file=${fileParam}`;
     }

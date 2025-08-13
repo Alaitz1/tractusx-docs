@@ -37,11 +37,6 @@
       "docs/images/image8.svg"
     ]
   },
-  "portal-frontend-registration": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
-  },
   "sldt-semantic-hub": {
     "branch": "main",
     "groups": {
@@ -279,6 +274,11 @@
       "docs/static/users-view.png",
       "docs/static/users-view.png.license"
     ]
+  },
+  "portal-frontend-registration": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
   },
   "sldt-digital-twin-registry": {
     "branch": "main",
@@ -701,29 +701,49 @@
       "docs/src/uml-diagrams/scope-context/irs-overall-system-view.puml"
     ]
   },
-  "portal-backend": {
+  "sldt-semantic-models": {
     "branch": "main",
     "groups": {
-      "docs/api": [
-        "docs/api/README.md",
-        "docs/api/administration-service.yaml",
-        "docs/api/apps-service.yaml",
-        "docs/api/notifications-service.yaml",
-        "docs/api/registration-service.yaml",
-        "docs/api/services-service.yaml"
+      "documentation/BAMM-method-documentation,-tool-and-training.md": [
+        "documentation/BAMM-method-documentation,-tool-and-training.md"
       ],
-      "docs/nuget": [
-        "docs/nuget/update-nuget-packages.md"
+      "documentation/GOVERNANCE.md": [
+        "documentation/GOVERNANCE.md"
+      ],
+      "documentation/Getting-Started-with-Aspect-Modeling-based-on-BAMM.md": [
+        "documentation/Getting-Started-with-Aspect-Modeling-based-on-BAMM.md"
+      ],
+      "documentation/images": [
+        "documentation/images/aspect-model.png",
+        "documentation/images/bamm-model-2.png",
+        "documentation/images/bamm-model.png",
+        "documentation/images/code-messages.png",
+        "documentation/images/code-snippet-2.png",
+        "documentation/images/code-snippet-3.png",
+        "documentation/images/code-validation.png",
+        "documentation/images/digital-twin-registry.png",
+        "documentation/images/dtr-sequence-diagram.png",
+        "documentation/images/example-code-movement.png",
+        "documentation/images/red-yellow-green.png",
+        "documentation/images/ttl-snippet.png"
       ]
     },
     "paths": [
-      "docs/api/README.md",
-      "docs/api/administration-service.yaml",
-      "docs/api/apps-service.yaml",
-      "docs/api/notifications-service.yaml",
-      "docs/api/registration-service.yaml",
-      "docs/api/services-service.yaml",
-      "docs/nuget/update-nuget-packages.md"
+      "documentation/BAMM-method-documentation,-tool-and-training.md",
+      "documentation/GOVERNANCE.md",
+      "documentation/Getting-Started-with-Aspect-Modeling-based-on-BAMM.md",
+      "documentation/images/aspect-model.png",
+      "documentation/images/bamm-model-2.png",
+      "documentation/images/bamm-model.png",
+      "documentation/images/code-messages.png",
+      "documentation/images/code-snippet-2.png",
+      "documentation/images/code-snippet-3.png",
+      "documentation/images/code-validation.png",
+      "documentation/images/digital-twin-registry.png",
+      "documentation/images/dtr-sequence-diagram.png",
+      "documentation/images/example-code-movement.png",
+      "documentation/images/red-yellow-green.png",
+      "documentation/images/ttl-snippet.png"
     ]
   },
   "bpdm": {
@@ -831,54 +851,294 @@
       "docs/templates/use-case.md"
     ]
   },
+  "portal-backend": {
+    "branch": "main",
+    "groups": {
+      "docs/api": [
+        "docs/api/README.md",
+        "docs/api/administration-service.yaml",
+        "docs/api/apps-service.yaml",
+        "docs/api/notifications-service.yaml",
+        "docs/api/registration-service.yaml",
+        "docs/api/services-service.yaml"
+      ],
+      "docs/nuget": [
+        "docs/nuget/update-nuget-packages.md"
+      ]
+    },
+    "paths": [
+      "docs/api/README.md",
+      "docs/api/administration-service.yaml",
+      "docs/api/apps-service.yaml",
+      "docs/api/notifications-service.yaml",
+      "docs/api/registration-service.yaml",
+      "docs/api/services-service.yaml",
+      "docs/nuget/update-nuget-packages.md"
+    ]
+  },
   "portal": {
     "branch": "main",
     "groups": {},
     "paths": []
   },
-  "sldt-semantic-models": {
+  "charts": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
+  },
+  ".github": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
+  },
+  "app-dashboard": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
+  },
+  "sldt-discovery-finder": {
     "branch": "main",
     "groups": {
-      "documentation/BAMM-method-documentation,-tool-and-training.md": [
-        "documentation/BAMM-method-documentation,-tool-and-training.md"
+      "docs/README.md": [
+        "docs/README.md"
       ],
-      "documentation/GOVERNANCE.md": [
-        "documentation/GOVERNANCE.md"
-      ],
-      "documentation/Getting-Started-with-Aspect-Modeling-based-on-BAMM.md": [
-        "documentation/Getting-Started-with-Aspect-Modeling-based-on-BAMM.md"
-      ],
-      "documentation/images": [
-        "documentation/images/aspect-model.png",
-        "documentation/images/bamm-model-2.png",
-        "documentation/images/bamm-model.png",
-        "documentation/images/code-messages.png",
-        "documentation/images/code-snippet-2.png",
-        "documentation/images/code-snippet-3.png",
-        "documentation/images/code-validation.png",
-        "documentation/images/digital-twin-registry.png",
-        "documentation/images/dtr-sequence-diagram.png",
-        "documentation/images/example-code-movement.png",
-        "documentation/images/red-yellow-green.png",
-        "documentation/images/ttl-snippet.png"
+      "docs/architecture": [
+        "docs/architecture/1-introduction-and-goals.md",
+        "docs/architecture/2-architecture-constraints.md",
+        "docs/architecture/3-system-scope-and-context.md",
+        "docs/architecture/4-runtime-view.md",
+        "docs/architecture/5-deployment-view.md",
+        "docs/architecture/6-crosscutting-concepts.md",
+        "docs/architecture/7-quality-scenarios.md",
+        "docs/architecture/glossary.md",
+        "docs/architecture/media/OverallConcept.png"
       ]
     },
     "paths": [
-      "documentation/BAMM-method-documentation,-tool-and-training.md",
-      "documentation/GOVERNANCE.md",
-      "documentation/Getting-Started-with-Aspect-Modeling-based-on-BAMM.md",
-      "documentation/images/aspect-model.png",
-      "documentation/images/bamm-model-2.png",
-      "documentation/images/bamm-model.png",
-      "documentation/images/code-messages.png",
-      "documentation/images/code-snippet-2.png",
-      "documentation/images/code-snippet-3.png",
-      "documentation/images/code-validation.png",
-      "documentation/images/digital-twin-registry.png",
-      "documentation/images/dtr-sequence-diagram.png",
-      "documentation/images/example-code-movement.png",
-      "documentation/images/red-yellow-green.png",
-      "documentation/images/ttl-snippet.png"
+      "docs/README.md",
+      "docs/architecture/1-introduction-and-goals.md",
+      "docs/architecture/2-architecture-constraints.md",
+      "docs/architecture/3-system-scope-and-context.md",
+      "docs/architecture/4-runtime-view.md",
+      "docs/architecture/5-deployment-view.md",
+      "docs/architecture/6-crosscutting-concepts.md",
+      "docs/architecture/7-quality-scenarios.md",
+      "docs/architecture/glossary.md",
+      "docs/architecture/media/OverallConcept.png"
+    ]
+  },
+  "sldt-bpn-discovery": {
+    "branch": "main",
+    "groups": {
+      "docs/README.md": [
+        "docs/README.md"
+      ],
+      "docs/architecture": [
+        "docs/architecture/1-introduction-and-goals.md",
+        "docs/architecture/2-architecture-constraints.md",
+        "docs/architecture/3-system-scope-and-context.md",
+        "docs/architecture/4-runtime-view.md",
+        "docs/architecture/5-deployment-view.md",
+        "docs/architecture/6-crosscutting-concepts.md",
+        "docs/architecture/7-quality-scenarios.md",
+        "docs/architecture/glossary.md",
+        "docs/architecture/media/OverallConcept.png"
+      ]
+    },
+    "paths": [
+      "docs/README.md",
+      "docs/architecture/1-introduction-and-goals.md",
+      "docs/architecture/2-architecture-constraints.md",
+      "docs/architecture/3-system-scope-and-context.md",
+      "docs/architecture/4-runtime-view.md",
+      "docs/architecture/5-deployment-view.md",
+      "docs/architecture/6-crosscutting-concepts.md",
+      "docs/architecture/7-quality-scenarios.md",
+      "docs/architecture/glossary.md",
+      "docs/architecture/media/OverallConcept.png"
+    ]
+  },
+  "tractusx-edc": {
+    "branch": "main",
+    "groups": {
+      "docs/README.md": [
+        "docs/README.md"
+      ],
+      "docs/development": [
+        "docs/development/README.md",
+        "docs/development/bidirectional-transfer/BidirectionalDataTransfer.md",
+        "docs/development/coding-principles.md",
+        "docs/development/dataplane-signaling/AutomaticRefresh.drawio",
+        "docs/development/dataplane-signaling/AutomaticRefresh.drawio.png",
+        "docs/development/dataplane-signaling/AutomaticRefreshEdrApi.drawio",
+        "docs/development/dataplane-signaling/AutomaticRefreshEdrApi.drawio.png",
+        "docs/development/dataplane-signaling/ManualRefresh.drawio",
+        "docs/development/dataplane-signaling/ManualRefresh.drawio.png",
+        "docs/development/dataplane-signaling/TxSignaling.drawio",
+        "docs/development/dataplane-signaling/TxSignaling.drawio.png",
+        "docs/development/dataplane-signaling/tx-signaling.extensions.md",
+        "docs/development/decision-records/2023-02-09-release-process/README.md",
+        "docs/development/decision-records/2023-02-27_testing/README.md",
+        "docs/development/decision-records/2023-03-02_gradle_build/README.md",
+        "docs/development/decision-records/2023-03-23_remove_lombok/README.md",
+        "docs/development/decision-records/2023-04-03_renaming_branches/README.md",
+        "docs/development/decision-records/2023-04-11_refactor_helmcharts/README.md",
+        "docs/development/decision-records/2023-04-20_conventional_commits/README.md",
+        "docs/development/decision-records/2023-05-23_activate_checkstyle/README.md",
+        "docs/development/decision-records/2023-05-23_java_17_baseline/README.md",
+        "docs/development/decision-records/2023-06-13_use_of_iron_library/README.md",
+        "docs/development/decision-records/2023-07-06_removing_manual_changelog/README.md",
+        "docs/development/decision-records/2023-08-03_improve_bpn_validation/README.md",
+        "docs/development/decision-records/2023-08-24-proprietrary-extensions/README.md",
+        "docs/development/decision-records/2023-09-08_issue_quality_stalebot/README.md",
+        "docs/development/decision-records/2024-03-05_token_refresh/README.md",
+        "docs/development/decision-records/2024-04-11_remove_sftp/README.md",
+        "docs/development/decision-records/2024-04-11_txedc_release_train/README.md",
+        "docs/development/decision-records/2024-07-18-Improvements-versioning-scheme/README.md",
+        "docs/development/decision-records/2024-08-28-Release-Workflow-Refactor/README.md",
+        "docs/development/decision-records/2024-10-04-Retire-agreements/README.md",
+        "docs/development/decision-records/2024-10-07-azure-distribution/README.md",
+        "docs/development/decision-records/2024-10-25-make-release-manual/README.md",
+        "docs/development/decision-records/2025-01-30-empty-asset-selector-validator/README.md",
+        "docs/development/decision-records/2025-02-12-dsp-downward-compatibility/README.md",
+        "docs/development/decision-records/2025-03-10-allure-report-release/README.md",
+        "docs/development/decision-records/2025-03-12-stop-publish-openapi-swaggerhub/README.md",
+        "docs/development/decision-records/2025-03-28-expose-bpns-from-group/README.md",
+        "docs/development/decision-records/2025-04-02-e2e-testing-persistence/README.md",
+        "docs/development/decision-records/2025-04-17-expose-all-bpn-groups/README.md",
+        "docs/development/decision-records/2025-05-22-make-event-info-available/README.md",
+        "docs/development/decision-records/2025-05-26-release-process/README.md",
+        "docs/development/decision-records/2025-06-04-non-finite-provider-push/README.md",
+        "docs/development/decision-records/2025-07-09-logging_and_metrics_strategy/README.md",
+        "docs/development/decision-records/2025-07-16-adoption-of-log4j/README.md",
+        "docs/development/decision-records/2025-07-21-return-http-status-codes-in-dataplane/README.md",
+        "docs/development/decision-records/2025-08-06-contract-agreement-bpns/README.md",
+        "docs/development/management-domains/README.md",
+        "docs/development/mock-edc.md",
+        "docs/development/project-structure.md",
+        "docs/development/release.md",
+        "docs/development/repository-structure.md"
+      ],
+      "docs/migration": [
+        "docs/migration/Version_0.0.x_0.1.x.md",
+        "docs/migration/Version_0.1.0_0.1.1.md",
+        "docs/migration/Version_0.1.2_0.1.3.md",
+        "docs/migration/Version_0.1.x_0.3.x.md",
+        "docs/migration/Version_0.3.0_0.3.1.md",
+        "docs/migration/Version_0.3.1_0.3.2.md",
+        "docs/migration/Version_0.3.3_0.3.4.md",
+        "docs/migration/Version_0.3.4_0.4.0.md",
+        "docs/migration/Version_0.4.x_0.5.x.md",
+        "docs/migration/Version_0.5.x_0.7.x.md",
+        "docs/migration/Version_0.7.x_0.8.x.md",
+        "docs/migration/Version_0.8.x_0.9.x.md",
+        "docs/migration/Version_0.9.x_0.10.x.md"
+      ],
+      "docs/release-notes": [
+        "docs/release-notes/Version 0.1.0.md",
+        "docs/release-notes/Version 0.1.1.md",
+        "docs/release-notes/Version 0.1.2.md",
+        "docs/release-notes/Version 0.1.3.md",
+        "docs/release-notes/Version 0.1.5.md"
+      ],
+      "docs/usage": [
+        "docs/usage/README.md",
+        "docs/usage/management-api-walkthrough/01_assets.md",
+        "docs/usage/management-api-walkthrough/02_policies.md",
+        "docs/usage/management-api-walkthrough/03_contractdefinitions.md",
+        "docs/usage/management-api-walkthrough/04_catalog.md",
+        "docs/usage/management-api-walkthrough/05_contractnegotiations.md",
+        "docs/usage/management-api-walkthrough/06_transferprocesses.md",
+        "docs/usage/management-api-walkthrough/07_edrs.md",
+        "docs/usage/management-api-walkthrough/08_contractagreements.md",
+        "docs/usage/management-api-walkthrough/09_responsechannels.md",
+        "docs/usage/management-api-walkthrough/README.md"
+      ]
+    },
+    "paths": [
+      "docs/README.md",
+      "docs/development/README.md",
+      "docs/development/bidirectional-transfer/BidirectionalDataTransfer.md",
+      "docs/development/coding-principles.md",
+      "docs/development/dataplane-signaling/AutomaticRefresh.drawio",
+      "docs/development/dataplane-signaling/AutomaticRefresh.drawio.png",
+      "docs/development/dataplane-signaling/AutomaticRefreshEdrApi.drawio",
+      "docs/development/dataplane-signaling/AutomaticRefreshEdrApi.drawio.png",
+      "docs/development/dataplane-signaling/ManualRefresh.drawio",
+      "docs/development/dataplane-signaling/ManualRefresh.drawio.png",
+      "docs/development/dataplane-signaling/TxSignaling.drawio",
+      "docs/development/dataplane-signaling/TxSignaling.drawio.png",
+      "docs/development/dataplane-signaling/tx-signaling.extensions.md",
+      "docs/development/decision-records/2023-02-09-release-process/README.md",
+      "docs/development/decision-records/2023-02-27_testing/README.md",
+      "docs/development/decision-records/2023-03-02_gradle_build/README.md",
+      "docs/development/decision-records/2023-03-23_remove_lombok/README.md",
+      "docs/development/decision-records/2023-04-03_renaming_branches/README.md",
+      "docs/development/decision-records/2023-04-11_refactor_helmcharts/README.md",
+      "docs/development/decision-records/2023-04-20_conventional_commits/README.md",
+      "docs/development/decision-records/2023-05-23_activate_checkstyle/README.md",
+      "docs/development/decision-records/2023-05-23_java_17_baseline/README.md",
+      "docs/development/decision-records/2023-06-13_use_of_iron_library/README.md",
+      "docs/development/decision-records/2023-07-06_removing_manual_changelog/README.md",
+      "docs/development/decision-records/2023-08-03_improve_bpn_validation/README.md",
+      "docs/development/decision-records/2023-08-24-proprietrary-extensions/README.md",
+      "docs/development/decision-records/2023-09-08_issue_quality_stalebot/README.md",
+      "docs/development/decision-records/2024-03-05_token_refresh/README.md",
+      "docs/development/decision-records/2024-04-11_remove_sftp/README.md",
+      "docs/development/decision-records/2024-04-11_txedc_release_train/README.md",
+      "docs/development/decision-records/2024-07-18-Improvements-versioning-scheme/README.md",
+      "docs/development/decision-records/2024-08-28-Release-Workflow-Refactor/README.md",
+      "docs/development/decision-records/2024-10-04-Retire-agreements/README.md",
+      "docs/development/decision-records/2024-10-07-azure-distribution/README.md",
+      "docs/development/decision-records/2024-10-25-make-release-manual/README.md",
+      "docs/development/decision-records/2025-01-30-empty-asset-selector-validator/README.md",
+      "docs/development/decision-records/2025-02-12-dsp-downward-compatibility/README.md",
+      "docs/development/decision-records/2025-03-10-allure-report-release/README.md",
+      "docs/development/decision-records/2025-03-12-stop-publish-openapi-swaggerhub/README.md",
+      "docs/development/decision-records/2025-03-28-expose-bpns-from-group/README.md",
+      "docs/development/decision-records/2025-04-02-e2e-testing-persistence/README.md",
+      "docs/development/decision-records/2025-04-17-expose-all-bpn-groups/README.md",
+      "docs/development/decision-records/2025-05-22-make-event-info-available/README.md",
+      "docs/development/decision-records/2025-05-26-release-process/README.md",
+      "docs/development/decision-records/2025-06-04-non-finite-provider-push/README.md",
+      "docs/development/decision-records/2025-07-09-logging_and_metrics_strategy/README.md",
+      "docs/development/decision-records/2025-07-16-adoption-of-log4j/README.md",
+      "docs/development/decision-records/2025-07-21-return-http-status-codes-in-dataplane/README.md",
+      "docs/development/decision-records/2025-08-06-contract-agreement-bpns/README.md",
+      "docs/development/management-domains/README.md",
+      "docs/development/mock-edc.md",
+      "docs/development/project-structure.md",
+      "docs/development/release.md",
+      "docs/development/repository-structure.md",
+      "docs/migration/Version_0.0.x_0.1.x.md",
+      "docs/migration/Version_0.1.0_0.1.1.md",
+      "docs/migration/Version_0.1.2_0.1.3.md",
+      "docs/migration/Version_0.1.x_0.3.x.md",
+      "docs/migration/Version_0.3.0_0.3.1.md",
+      "docs/migration/Version_0.3.1_0.3.2.md",
+      "docs/migration/Version_0.3.3_0.3.4.md",
+      "docs/migration/Version_0.3.4_0.4.0.md",
+      "docs/migration/Version_0.4.x_0.5.x.md",
+      "docs/migration/Version_0.5.x_0.7.x.md",
+      "docs/migration/Version_0.7.x_0.8.x.md",
+      "docs/migration/Version_0.8.x_0.9.x.md",
+      "docs/migration/Version_0.9.x_0.10.x.md",
+      "docs/release-notes/Version 0.1.0.md",
+      "docs/release-notes/Version 0.1.1.md",
+      "docs/release-notes/Version 0.1.2.md",
+      "docs/release-notes/Version 0.1.3.md",
+      "docs/release-notes/Version 0.1.5.md",
+      "docs/usage/README.md",
+      "docs/usage/management-api-walkthrough/01_assets.md",
+      "docs/usage/management-api-walkthrough/02_policies.md",
+      "docs/usage/management-api-walkthrough/03_contractdefinitions.md",
+      "docs/usage/management-api-walkthrough/04_catalog.md",
+      "docs/usage/management-api-walkthrough/05_contractnegotiations.md",
+      "docs/usage/management-api-walkthrough/06_transferprocesses.md",
+      "docs/usage/management-api-walkthrough/07_edrs.md",
+      "docs/usage/management-api-walkthrough/08_contractagreements.md",
+      "docs/usage/management-api-walkthrough/09_responsechannels.md",
+      "docs/usage/management-api-walkthrough/README.md"
     ]
   },
   "eclipse-tractusx.github.io": {
@@ -917,22 +1177,22 @@
         "docs/release/trg-0/trg-0.md",
         "docs/release/trg-0/trg-9-01.md",
         "docs/release/trg-1/_category_.json",
+        "docs/release/trg-1/trg-1-01.md",
+        "docs/release/trg-1/trg-1-02.md",
+        "docs/release/trg-1/trg-1-03.md",
+        "docs/release/trg-1/trg-1-04.md",
         "docs/release/trg-1/trg-1-05.md",
         "docs/release/trg-1/trg-1-06.md",
         "docs/release/trg-1/trg-1-07.md",
         "docs/release/trg-1/trg-1-08.md",
         "docs/release/trg-1/trg-1-09.md",
-        "docs/release/trg-1/trg-1-1.md",
-        "docs/release/trg-1/trg-1-2.md",
-        "docs/release/trg-1/trg-1-3.md",
-        "docs/release/trg-1/trg-1-4.md",
         "docs/release/trg-2/_category_.json",
-        "docs/release/trg-2/trg-2-1.md",
-        "docs/release/trg-2/trg-2-3.md",
-        "docs/release/trg-2/trg-2-4.md",
-        "docs/release/trg-2/trg-2-5.md",
+        "docs/release/trg-2/trg-2-01.md",
+        "docs/release/trg-2/trg-2-03.md",
+        "docs/release/trg-2/trg-2-04.md",
+        "docs/release/trg-2/trg-2-05.md",
         "docs/release/trg-3/_category_.json",
-        "docs/release/trg-3/trg-3-2.md",
+        "docs/release/trg-3/trg-3-02.md",
         "docs/release/trg-4/_category_.json",
         "docs/release/trg-4/assets/trg4-1-semver-image.png",
         "docs/release/trg-4/trg-4-01.md",
@@ -958,7 +1218,7 @@
         "docs/release/trg-6/_category_.json",
         "docs/release/trg-6/assets/trg-6-1_chart_release_action_tag-error.png",
         "docs/release/trg-6/assets/trg-6-1_gh_pages_setup.png",
-        "docs/release/trg-6/trg-6-1.md",
+        "docs/release/trg-6/trg-6-01.md",
         "docs/release/trg-7/_category_.json",
         "docs/release/trg-7/trg-7-00.md",
         "docs/release/trg-7/trg-7-01.md",
@@ -1030,22 +1290,22 @@
       "docs/release/trg-0/trg-0.md",
       "docs/release/trg-0/trg-9-01.md",
       "docs/release/trg-1/_category_.json",
+      "docs/release/trg-1/trg-1-01.md",
+      "docs/release/trg-1/trg-1-02.md",
+      "docs/release/trg-1/trg-1-03.md",
+      "docs/release/trg-1/trg-1-04.md",
       "docs/release/trg-1/trg-1-05.md",
       "docs/release/trg-1/trg-1-06.md",
       "docs/release/trg-1/trg-1-07.md",
       "docs/release/trg-1/trg-1-08.md",
       "docs/release/trg-1/trg-1-09.md",
-      "docs/release/trg-1/trg-1-1.md",
-      "docs/release/trg-1/trg-1-2.md",
-      "docs/release/trg-1/trg-1-3.md",
-      "docs/release/trg-1/trg-1-4.md",
       "docs/release/trg-2/_category_.json",
-      "docs/release/trg-2/trg-2-1.md",
-      "docs/release/trg-2/trg-2-3.md",
-      "docs/release/trg-2/trg-2-4.md",
-      "docs/release/trg-2/trg-2-5.md",
+      "docs/release/trg-2/trg-2-01.md",
+      "docs/release/trg-2/trg-2-03.md",
+      "docs/release/trg-2/trg-2-04.md",
+      "docs/release/trg-2/trg-2-05.md",
       "docs/release/trg-3/_category_.json",
-      "docs/release/trg-3/trg-3-2.md",
+      "docs/release/trg-3/trg-3-02.md",
       "docs/release/trg-4/_category_.json",
       "docs/release/trg-4/assets/trg4-1-semver-image.png",
       "docs/release/trg-4/trg-4-01.md",
@@ -1071,7 +1331,7 @@
       "docs/release/trg-6/_category_.json",
       "docs/release/trg-6/assets/trg-6-1_chart_release_action_tag-error.png",
       "docs/release/trg-6/assets/trg-6-1_gh_pages_setup.png",
-      "docs/release/trg-6/trg-6-1.md",
+      "docs/release/trg-6/trg-6-01.md",
       "docs/release/trg-7/_category_.json",
       "docs/release/trg-7/trg-7-00.md",
       "docs/release/trg-7/trg-7-01.md",
@@ -1114,51 +1374,104 @@
       "documentation/kit-maturity-levels.md"
     ]
   },
-  "charts": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
-  },
-  ".github": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
-  },
-  "sldt-discovery-finder": {
+  "tractus-x-umbrella": {
     "branch": "main",
     "groups": {
       "docs/README.md": [
         "docs/README.md"
       ],
+      "docs/admin": [
+        "docs/admin/upgrade-components.md"
+      ],
+      "docs/api": [
+        "docs/api/README.md",
+        "docs/api/bruno/Umbrella_Bruno.json",
+        "docs/api/postman/UmbrellaConnectorData-Exchange.postman_collection.json"
+      ],
       "docs/architecture": [
-        "docs/architecture/1-introduction-and-goals.md",
-        "docs/architecture/2-architecture-constraints.md",
-        "docs/architecture/3-system-scope-and-context.md",
-        "docs/architecture/4-runtime-view.md",
-        "docs/architecture/5-deployment-view.md",
-        "docs/architecture/6-crosscutting-concepts.md",
-        "docs/architecture/7-quality-scenarios.md",
-        "docs/architecture/glossary.md",
-        "docs/architecture/media/OverallConcept.png"
+        "docs/architecture/decision-records/TEMPLATE.md"
+      ],
+      "docs/archive": [
+        "docs/archive/concept/dependencies.md",
+        "docs/archive/concept/plan.md",
+        "docs/archive/concept/seeds-irs.md",
+        "docs/archive/concept/seeds-trace-x.md"
+      ],
+      "docs/concept": [
+        "docs/concept/solution-design-hausanschluss-bundle.md"
+      ],
+      "docs/test-data-seeding": [
+        "docs/test-data-seeding/README.md"
+      ],
+      "docs/user": [
+        "docs/user/bundles/hausanschluss-bundles.md",
+        "docs/user/guides/data-exchange.md",
+        "docs/user/guides/data-exchange/consume-data.md",
+        "docs/user/guides/data-exchange/provide-data.md",
+        "docs/user/guides/database-access.md",
+        "docs/user/guides/observability/img/grafana-example-1.png",
+        "docs/user/guides/observability/img/grafana-example-1.png.license",
+        "docs/user/guides/observability/img/grafana-example.png",
+        "docs/user/guides/observability/img/grafana-example.png.license",
+        "docs/user/guides/observability/img/jaeger-example.png",
+        "docs/user/guides/observability/img/jaeger-example.png.license",
+        "docs/user/guides/observability/img/loki-example.png",
+        "docs/user/guides/observability/img/loki-example.png.license",
+        "docs/user/guides/observability/img/prometheus-example.png",
+        "docs/user/guides/observability/img/prometheus-example.png.license",
+        "docs/user/guides/observability/observability.md",
+        "docs/user/guides/portal-usage.md",
+        "docs/user/installation/README.md",
+        "docs/user/installation/local-repository.md",
+        "docs/user/installation/released-chart.md",
+        "docs/user/installation/uninstallation.md",
+        "docs/user/network/README.md",
+        "docs/user/network/tls.md",
+        "docs/user/note-r2405-onwards/README.md",
+        "docs/user/setup/README.md",
+        "docs/user/setup/semantic-hub.md"
       ]
     },
     "paths": [
       "docs/README.md",
-      "docs/architecture/1-introduction-and-goals.md",
-      "docs/architecture/2-architecture-constraints.md",
-      "docs/architecture/3-system-scope-and-context.md",
-      "docs/architecture/4-runtime-view.md",
-      "docs/architecture/5-deployment-view.md",
-      "docs/architecture/6-crosscutting-concepts.md",
-      "docs/architecture/7-quality-scenarios.md",
-      "docs/architecture/glossary.md",
-      "docs/architecture/media/OverallConcept.png"
+      "docs/admin/upgrade-components.md",
+      "docs/api/README.md",
+      "docs/api/bruno/Umbrella_Bruno.json",
+      "docs/api/postman/UmbrellaConnectorData-Exchange.postman_collection.json",
+      "docs/architecture/decision-records/TEMPLATE.md",
+      "docs/archive/concept/dependencies.md",
+      "docs/archive/concept/plan.md",
+      "docs/archive/concept/seeds-irs.md",
+      "docs/archive/concept/seeds-trace-x.md",
+      "docs/concept/solution-design-hausanschluss-bundle.md",
+      "docs/test-data-seeding/README.md",
+      "docs/user/bundles/hausanschluss-bundles.md",
+      "docs/user/guides/data-exchange.md",
+      "docs/user/guides/data-exchange/consume-data.md",
+      "docs/user/guides/data-exchange/provide-data.md",
+      "docs/user/guides/database-access.md",
+      "docs/user/guides/observability/img/grafana-example-1.png",
+      "docs/user/guides/observability/img/grafana-example-1.png.license",
+      "docs/user/guides/observability/img/grafana-example.png",
+      "docs/user/guides/observability/img/grafana-example.png.license",
+      "docs/user/guides/observability/img/jaeger-example.png",
+      "docs/user/guides/observability/img/jaeger-example.png.license",
+      "docs/user/guides/observability/img/loki-example.png",
+      "docs/user/guides/observability/img/loki-example.png.license",
+      "docs/user/guides/observability/img/prometheus-example.png",
+      "docs/user/guides/observability/img/prometheus-example.png.license",
+      "docs/user/guides/observability/observability.md",
+      "docs/user/guides/portal-usage.md",
+      "docs/user/installation/README.md",
+      "docs/user/installation/local-repository.md",
+      "docs/user/installation/released-chart.md",
+      "docs/user/installation/uninstallation.md",
+      "docs/user/network/README.md",
+      "docs/user/network/tls.md",
+      "docs/user/note-r2405-onwards/README.md",
+      "docs/user/setup/README.md",
+      "docs/user/setup/semantic-hub.md"
     ]
-  },
-  "app-dashboard": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
   },
   "portal-assets": {
     "branch": "main",
@@ -3263,6 +3576,66 @@
       "docs/user/Style-Guide/toast message.md"
     ]
   },
+  ".eclipsefdn": {
+    "branch": "main",
+    "groups": {
+      "docs/index.md": [
+        "docs/index.md"
+      ],
+      "docs/overrides": [
+        "docs/overrides/main.html"
+      ],
+      "docs/stylesheets": [
+        "docs/stylesheets/extra.css"
+      ]
+    },
+    "paths": [
+      "docs/index.md",
+      "docs/overrides/main.html",
+      "docs/stylesheets/extra.css"
+    ]
+  },
+  "sig-release": {
+    "branch": "main",
+    "groups": {
+      "docs/getting-started.md": [
+        "docs/getting-started.md"
+      ],
+      "docs/metadata_file.md": [
+        "docs/metadata_file.md"
+      ],
+      "docs/open-refinement-and-planning.md": [
+        "docs/open-refinement-and-planning.md"
+      ],
+      "docs/planning.md": [
+        "docs/planning.md"
+      ],
+      "docs/product_release.md": [
+        "docs/product_release.md"
+      ],
+      "docs/static": [
+        "docs/static/releasemanagement-acceptance-happy-path.mmd",
+        "docs/static/releasemanagement-acceptance-happy-path.svg",
+        "docs/static/releasemanagement-acceptance-other-path.mmd",
+        "docs/static/releasemanagement-acceptance-other-path.svg"
+      ],
+      "docs/tractus-x-release.md": [
+        "docs/tractus-x-release.md"
+      ]
+    },
+    "paths": [
+      "docs/getting-started.md",
+      "docs/metadata_file.md",
+      "docs/open-refinement-and-planning.md",
+      "docs/planning.md",
+      "docs/product_release.md",
+      "docs/static/releasemanagement-acceptance-happy-path.mmd",
+      "docs/static/releasemanagement-acceptance-happy-path.svg",
+      "docs/static/releasemanagement-acceptance-other-path.mmd",
+      "docs/static/releasemanagement-acceptance-other-path.svg",
+      "docs/tractus-x-release.md"
+    ]
+  },
   "traceability-foss": {
     "branch": "main",
     "groups": {
@@ -3836,338 +4209,6 @@
       "docs/trace-x-logo.svg"
     ]
   },
-  "sldt-bpn-discovery": {
-    "branch": "main",
-    "groups": {
-      "docs/README.md": [
-        "docs/README.md"
-      ],
-      "docs/architecture": [
-        "docs/architecture/1-introduction-and-goals.md",
-        "docs/architecture/2-architecture-constraints.md",
-        "docs/architecture/3-system-scope-and-context.md",
-        "docs/architecture/4-runtime-view.md",
-        "docs/architecture/5-deployment-view.md",
-        "docs/architecture/6-crosscutting-concepts.md",
-        "docs/architecture/7-quality-scenarios.md",
-        "docs/architecture/glossary.md",
-        "docs/architecture/media/OverallConcept.png"
-      ]
-    },
-    "paths": [
-      "docs/README.md",
-      "docs/architecture/1-introduction-and-goals.md",
-      "docs/architecture/2-architecture-constraints.md",
-      "docs/architecture/3-system-scope-and-context.md",
-      "docs/architecture/4-runtime-view.md",
-      "docs/architecture/5-deployment-view.md",
-      "docs/architecture/6-crosscutting-concepts.md",
-      "docs/architecture/7-quality-scenarios.md",
-      "docs/architecture/glossary.md",
-      "docs/architecture/media/OverallConcept.png"
-    ]
-  },
-  "tractus-x-umbrella": {
-    "branch": "main",
-    "groups": {
-      "docs/README.md": [
-        "docs/README.md"
-      ],
-      "docs/admin": [
-        "docs/admin/upgrade-components.md"
-      ],
-      "docs/api": [
-        "docs/api/README.md",
-        "docs/api/bruno/Umbrella_Bruno.json",
-        "docs/api/postman/UmbrellaConnectorData-Exchange.postman_collection.json"
-      ],
-      "docs/architecture": [
-        "docs/architecture/decision-records/TEMPLATE.md"
-      ],
-      "docs/archive": [
-        "docs/archive/concept/dependencies.md",
-        "docs/archive/concept/plan.md",
-        "docs/archive/concept/seeds-irs.md",
-        "docs/archive/concept/seeds-trace-x.md"
-      ],
-      "docs/concept": [
-        "docs/concept/solution-design-hausanschluss-bundle.md"
-      ],
-      "docs/test-data-seeding": [
-        "docs/test-data-seeding/README.md"
-      ],
-      "docs/user": [
-        "docs/user/bundles/hausanschluss-bundles.md",
-        "docs/user/guides/data-exchange.md",
-        "docs/user/guides/data-exchange/consume-data.md",
-        "docs/user/guides/data-exchange/provide-data.md",
-        "docs/user/guides/database-access.md",
-        "docs/user/guides/observability/img/grafana-example-1.png",
-        "docs/user/guides/observability/img/grafana-example-1.png.license",
-        "docs/user/guides/observability/img/grafana-example.png",
-        "docs/user/guides/observability/img/grafana-example.png.license",
-        "docs/user/guides/observability/img/jaeger-example.png",
-        "docs/user/guides/observability/img/jaeger-example.png.license",
-        "docs/user/guides/observability/img/loki-example.png",
-        "docs/user/guides/observability/img/loki-example.png.license",
-        "docs/user/guides/observability/img/prometheus-example.png",
-        "docs/user/guides/observability/img/prometheus-example.png.license",
-        "docs/user/guides/observability/observability.md",
-        "docs/user/guides/portal-usage.md",
-        "docs/user/installation/README.md",
-        "docs/user/installation/local-repository.md",
-        "docs/user/installation/released-chart.md",
-        "docs/user/installation/uninstallation.md",
-        "docs/user/network/README.md",
-        "docs/user/network/tls.md",
-        "docs/user/note-r2405-onwards/README.md",
-        "docs/user/setup/README.md",
-        "docs/user/setup/semantic-hub.md"
-      ]
-    },
-    "paths": [
-      "docs/README.md",
-      "docs/admin/upgrade-components.md",
-      "docs/api/README.md",
-      "docs/api/bruno/Umbrella_Bruno.json",
-      "docs/api/postman/UmbrellaConnectorData-Exchange.postman_collection.json",
-      "docs/architecture/decision-records/TEMPLATE.md",
-      "docs/archive/concept/dependencies.md",
-      "docs/archive/concept/plan.md",
-      "docs/archive/concept/seeds-irs.md",
-      "docs/archive/concept/seeds-trace-x.md",
-      "docs/concept/solution-design-hausanschluss-bundle.md",
-      "docs/test-data-seeding/README.md",
-      "docs/user/bundles/hausanschluss-bundles.md",
-      "docs/user/guides/data-exchange.md",
-      "docs/user/guides/data-exchange/consume-data.md",
-      "docs/user/guides/data-exchange/provide-data.md",
-      "docs/user/guides/database-access.md",
-      "docs/user/guides/observability/img/grafana-example-1.png",
-      "docs/user/guides/observability/img/grafana-example-1.png.license",
-      "docs/user/guides/observability/img/grafana-example.png",
-      "docs/user/guides/observability/img/grafana-example.png.license",
-      "docs/user/guides/observability/img/jaeger-example.png",
-      "docs/user/guides/observability/img/jaeger-example.png.license",
-      "docs/user/guides/observability/img/loki-example.png",
-      "docs/user/guides/observability/img/loki-example.png.license",
-      "docs/user/guides/observability/img/prometheus-example.png",
-      "docs/user/guides/observability/img/prometheus-example.png.license",
-      "docs/user/guides/observability/observability.md",
-      "docs/user/guides/portal-usage.md",
-      "docs/user/installation/README.md",
-      "docs/user/installation/local-repository.md",
-      "docs/user/installation/released-chart.md",
-      "docs/user/installation/uninstallation.md",
-      "docs/user/network/README.md",
-      "docs/user/network/tls.md",
-      "docs/user/note-r2405-onwards/README.md",
-      "docs/user/setup/README.md",
-      "docs/user/setup/semantic-hub.md"
-    ]
-  },
-  ".eclipsefdn": {
-    "branch": "main",
-    "groups": {
-      "docs/index.md": [
-        "docs/index.md"
-      ],
-      "docs/overrides": [
-        "docs/overrides/main.html"
-      ],
-      "docs/stylesheets": [
-        "docs/stylesheets/extra.css"
-      ]
-    },
-    "paths": [
-      "docs/index.md",
-      "docs/overrides/main.html",
-      "docs/stylesheets/extra.css"
-    ]
-  },
-  "tractusx-edc": {
-    "branch": "main",
-    "groups": {
-      "docs/README.md": [
-        "docs/README.md"
-      ],
-      "docs/development": [
-        "docs/development/README.md",
-        "docs/development/bidirectional-transfer/BidirectionalDataTransfer.md",
-        "docs/development/coding-principles.md",
-        "docs/development/dataplane-signaling/AutomaticRefresh.drawio",
-        "docs/development/dataplane-signaling/AutomaticRefresh.drawio.png",
-        "docs/development/dataplane-signaling/AutomaticRefreshEdrApi.drawio",
-        "docs/development/dataplane-signaling/AutomaticRefreshEdrApi.drawio.png",
-        "docs/development/dataplane-signaling/ManualRefresh.drawio",
-        "docs/development/dataplane-signaling/ManualRefresh.drawio.png",
-        "docs/development/dataplane-signaling/TxSignaling.drawio",
-        "docs/development/dataplane-signaling/TxSignaling.drawio.png",
-        "docs/development/dataplane-signaling/tx-signaling.extensions.md",
-        "docs/development/decision-records/2023-02-09-release-process/README.md",
-        "docs/development/decision-records/2023-02-27_testing/README.md",
-        "docs/development/decision-records/2023-03-02_gradle_build/README.md",
-        "docs/development/decision-records/2023-03-23_remove_lombok/README.md",
-        "docs/development/decision-records/2023-04-03_renaming_branches/README.md",
-        "docs/development/decision-records/2023-04-11_refactor_helmcharts/README.md",
-        "docs/development/decision-records/2023-04-20_conventional_commits/README.md",
-        "docs/development/decision-records/2023-05-23_activate_checkstyle/README.md",
-        "docs/development/decision-records/2023-05-23_java_17_baseline/README.md",
-        "docs/development/decision-records/2023-06-13_use_of_iron_library/README.md",
-        "docs/development/decision-records/2023-07-06_removing_manual_changelog/README.md",
-        "docs/development/decision-records/2023-08-03_improve_bpn_validation/README.md",
-        "docs/development/decision-records/2023-08-24-proprietrary-extensions/README.md",
-        "docs/development/decision-records/2023-09-08_issue_quality_stalebot/README.md",
-        "docs/development/decision-records/2024-03-05_token_refresh/README.md",
-        "docs/development/decision-records/2024-04-11_remove_sftp/README.md",
-        "docs/development/decision-records/2024-04-11_txedc_release_train/README.md",
-        "docs/development/decision-records/2024-07-18-Improvements-versioning-scheme/README.md",
-        "docs/development/decision-records/2024-08-28-Release-Workflow-Refactor/README.md",
-        "docs/development/decision-records/2024-10-04-Retire-agreements/README.md",
-        "docs/development/decision-records/2024-10-07-azure-distribution/README.md",
-        "docs/development/decision-records/2024-10-25-make-release-manual/README.md",
-        "docs/development/decision-records/2025-01-30-empty-asset-selector-validator/README.md",
-        "docs/development/decision-records/2025-02-12-dsp-downward-compatibility/README.md",
-        "docs/development/decision-records/2025-03-10-allure-report-release/README.md",
-        "docs/development/decision-records/2025-03-12-stop-publish-openapi-swaggerhub/README.md",
-        "docs/development/decision-records/2025-03-28-expose-bpns-from-group/README.md",
-        "docs/development/decision-records/2025-04-02-e2e-testing-persistence/README.md",
-        "docs/development/decision-records/2025-04-17-expose-all-bpn-groups/README.md",
-        "docs/development/decision-records/2025-05-22-make-event-info-available/README.md",
-        "docs/development/decision-records/2025-05-26-release-process/README.md",
-        "docs/development/decision-records/2025-06-04-non-finite-provider-push/README.md",
-        "docs/development/decision-records/2025-07-09-logging_and_metrics_strategy/README.md",
-        "docs/development/decision-records/2025-07-16-adoption-of-log4j/README.md",
-        "docs/development/decision-records/2025-07-21-return-http-status-codes-in-dataplane/README.md",
-        "docs/development/decision-records/2025-08-06-contract-agreement-bpns/README.md",
-        "docs/development/management-domains/README.md",
-        "docs/development/mock-edc.md",
-        "docs/development/project-structure.md",
-        "docs/development/release.md",
-        "docs/development/repository-structure.md"
-      ],
-      "docs/migration": [
-        "docs/migration/Version_0.0.x_0.1.x.md",
-        "docs/migration/Version_0.1.0_0.1.1.md",
-        "docs/migration/Version_0.1.2_0.1.3.md",
-        "docs/migration/Version_0.1.x_0.3.x.md",
-        "docs/migration/Version_0.3.0_0.3.1.md",
-        "docs/migration/Version_0.3.1_0.3.2.md",
-        "docs/migration/Version_0.3.3_0.3.4.md",
-        "docs/migration/Version_0.3.4_0.4.0.md",
-        "docs/migration/Version_0.4.x_0.5.x.md",
-        "docs/migration/Version_0.5.x_0.7.x.md",
-        "docs/migration/Version_0.7.x_0.8.x.md",
-        "docs/migration/Version_0.8.x_0.9.x.md",
-        "docs/migration/Version_0.9.x_0.10.x.md"
-      ],
-      "docs/release-notes": [
-        "docs/release-notes/Version 0.1.0.md",
-        "docs/release-notes/Version 0.1.1.md",
-        "docs/release-notes/Version 0.1.2.md",
-        "docs/release-notes/Version 0.1.3.md",
-        "docs/release-notes/Version 0.1.5.md"
-      ],
-      "docs/usage": [
-        "docs/usage/README.md",
-        "docs/usage/management-api-walkthrough/01_assets.md",
-        "docs/usage/management-api-walkthrough/02_policies.md",
-        "docs/usage/management-api-walkthrough/03_contractdefinitions.md",
-        "docs/usage/management-api-walkthrough/04_catalog.md",
-        "docs/usage/management-api-walkthrough/05_contractnegotiations.md",
-        "docs/usage/management-api-walkthrough/06_transferprocesses.md",
-        "docs/usage/management-api-walkthrough/07_edrs.md",
-        "docs/usage/management-api-walkthrough/08_contractagreements.md",
-        "docs/usage/management-api-walkthrough/09_responsechannels.md",
-        "docs/usage/management-api-walkthrough/README.md"
-      ]
-    },
-    "paths": [
-      "docs/README.md",
-      "docs/development/README.md",
-      "docs/development/bidirectional-transfer/BidirectionalDataTransfer.md",
-      "docs/development/coding-principles.md",
-      "docs/development/dataplane-signaling/AutomaticRefresh.drawio",
-      "docs/development/dataplane-signaling/AutomaticRefresh.drawio.png",
-      "docs/development/dataplane-signaling/AutomaticRefreshEdrApi.drawio",
-      "docs/development/dataplane-signaling/AutomaticRefreshEdrApi.drawio.png",
-      "docs/development/dataplane-signaling/ManualRefresh.drawio",
-      "docs/development/dataplane-signaling/ManualRefresh.drawio.png",
-      "docs/development/dataplane-signaling/TxSignaling.drawio",
-      "docs/development/dataplane-signaling/TxSignaling.drawio.png",
-      "docs/development/dataplane-signaling/tx-signaling.extensions.md",
-      "docs/development/decision-records/2023-02-09-release-process/README.md",
-      "docs/development/decision-records/2023-02-27_testing/README.md",
-      "docs/development/decision-records/2023-03-02_gradle_build/README.md",
-      "docs/development/decision-records/2023-03-23_remove_lombok/README.md",
-      "docs/development/decision-records/2023-04-03_renaming_branches/README.md",
-      "docs/development/decision-records/2023-04-11_refactor_helmcharts/README.md",
-      "docs/development/decision-records/2023-04-20_conventional_commits/README.md",
-      "docs/development/decision-records/2023-05-23_activate_checkstyle/README.md",
-      "docs/development/decision-records/2023-05-23_java_17_baseline/README.md",
-      "docs/development/decision-records/2023-06-13_use_of_iron_library/README.md",
-      "docs/development/decision-records/2023-07-06_removing_manual_changelog/README.md",
-      "docs/development/decision-records/2023-08-03_improve_bpn_validation/README.md",
-      "docs/development/decision-records/2023-08-24-proprietrary-extensions/README.md",
-      "docs/development/decision-records/2023-09-08_issue_quality_stalebot/README.md",
-      "docs/development/decision-records/2024-03-05_token_refresh/README.md",
-      "docs/development/decision-records/2024-04-11_remove_sftp/README.md",
-      "docs/development/decision-records/2024-04-11_txedc_release_train/README.md",
-      "docs/development/decision-records/2024-07-18-Improvements-versioning-scheme/README.md",
-      "docs/development/decision-records/2024-08-28-Release-Workflow-Refactor/README.md",
-      "docs/development/decision-records/2024-10-04-Retire-agreements/README.md",
-      "docs/development/decision-records/2024-10-07-azure-distribution/README.md",
-      "docs/development/decision-records/2024-10-25-make-release-manual/README.md",
-      "docs/development/decision-records/2025-01-30-empty-asset-selector-validator/README.md",
-      "docs/development/decision-records/2025-02-12-dsp-downward-compatibility/README.md",
-      "docs/development/decision-records/2025-03-10-allure-report-release/README.md",
-      "docs/development/decision-records/2025-03-12-stop-publish-openapi-swaggerhub/README.md",
-      "docs/development/decision-records/2025-03-28-expose-bpns-from-group/README.md",
-      "docs/development/decision-records/2025-04-02-e2e-testing-persistence/README.md",
-      "docs/development/decision-records/2025-04-17-expose-all-bpn-groups/README.md",
-      "docs/development/decision-records/2025-05-22-make-event-info-available/README.md",
-      "docs/development/decision-records/2025-05-26-release-process/README.md",
-      "docs/development/decision-records/2025-06-04-non-finite-provider-push/README.md",
-      "docs/development/decision-records/2025-07-09-logging_and_metrics_strategy/README.md",
-      "docs/development/decision-records/2025-07-16-adoption-of-log4j/README.md",
-      "docs/development/decision-records/2025-07-21-return-http-status-codes-in-dataplane/README.md",
-      "docs/development/decision-records/2025-08-06-contract-agreement-bpns/README.md",
-      "docs/development/management-domains/README.md",
-      "docs/development/mock-edc.md",
-      "docs/development/project-structure.md",
-      "docs/development/release.md",
-      "docs/development/repository-structure.md",
-      "docs/migration/Version_0.0.x_0.1.x.md",
-      "docs/migration/Version_0.1.0_0.1.1.md",
-      "docs/migration/Version_0.1.2_0.1.3.md",
-      "docs/migration/Version_0.1.x_0.3.x.md",
-      "docs/migration/Version_0.3.0_0.3.1.md",
-      "docs/migration/Version_0.3.1_0.3.2.md",
-      "docs/migration/Version_0.3.3_0.3.4.md",
-      "docs/migration/Version_0.3.4_0.4.0.md",
-      "docs/migration/Version_0.4.x_0.5.x.md",
-      "docs/migration/Version_0.5.x_0.7.x.md",
-      "docs/migration/Version_0.7.x_0.8.x.md",
-      "docs/migration/Version_0.8.x_0.9.x.md",
-      "docs/migration/Version_0.9.x_0.10.x.md",
-      "docs/release-notes/Version 0.1.0.md",
-      "docs/release-notes/Version 0.1.1.md",
-      "docs/release-notes/Version 0.1.2.md",
-      "docs/release-notes/Version 0.1.3.md",
-      "docs/release-notes/Version 0.1.5.md",
-      "docs/usage/README.md",
-      "docs/usage/management-api-walkthrough/01_assets.md",
-      "docs/usage/management-api-walkthrough/02_policies.md",
-      "docs/usage/management-api-walkthrough/03_contractdefinitions.md",
-      "docs/usage/management-api-walkthrough/04_catalog.md",
-      "docs/usage/management-api-walkthrough/05_contractnegotiations.md",
-      "docs/usage/management-api-walkthrough/06_transferprocesses.md",
-      "docs/usage/management-api-walkthrough/07_edrs.md",
-      "docs/usage/management-api-walkthrough/08_contractagreements.md",
-      "docs/usage/management-api-walkthrough/09_responsechannels.md",
-      "docs/usage/management-api-walkthrough/README.md"
-    ]
-  },
   "portal-shared-components": {
     "branch": "main",
     "groups": {
@@ -4203,48 +4244,210 @@
       "docs/static/release-process.png.license"
     ]
   },
-  "sig-release": {
+  "eclipse-tractusx.github.io.largefiles": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
+  },
+  "tutorial-resources": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
+  },
+  "tractusx-profiles": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
+  },
+  "policy-hub": {
     "branch": "main",
     "groups": {
-      "docs/getting-started.md": [
-        "docs/getting-started.md"
+      "docs/README.md": [
+        "docs/README.md"
       ],
-      "docs/metadata_file.md": [
-        "docs/metadata_file.md"
+      "docs/admin": [
+        "docs/admin/Admin_Guide.md",
+        "docs/admin/add-policies/add-policies.md",
+        "docs/admin/dev-process/Dev-flow_deploy-dev-env.md",
+        "docs/admin/dev-process/Dev-flow_git-diagram.md",
+        "docs/admin/dev-process/Enumeration Handling.md",
+        "docs/admin/dev-process/How to contribute.md",
+        "docs/admin/known-issues-and-limitations.md",
+        "docs/admin/release-process/Release Process.md"
       ],
-      "docs/open-refinement-and-planning.md": [
-        "docs/open-refinement-and-planning.md"
+      "docs/api": [
+        "docs/api/API_Doc.md",
+        "docs/api/hub-service.yaml",
+        "docs/api/postman/example-requests.md",
+        "docs/api/postman/policy-hub.postman_collection.json"
       ],
-      "docs/planning.md": [
-        "docs/planning.md"
-      ],
-      "docs/product_release.md": [
-        "docs/product_release.md"
-      ],
-      "docs/static": [
-        "docs/static/releasemanagement-acceptance-happy-path.mmd",
-        "docs/static/releasemanagement-acceptance-happy-path.svg",
-        "docs/static/releasemanagement-acceptance-other-path.mmd",
-        "docs/static/releasemanagement-acceptance-other-path.svg"
-      ],
-      "docs/tractus-x-release.md": [
-        "docs/tractus-x-release.md"
+      "docs/architecture": [
+        "docs/architecture/02_architecture_constraints.md",
+        "docs/architecture/03_system_scope_and_context.md",
+        "docs/architecture/04_solution_strategy.md",
+        "docs/architecture/05_building_block_view.md",
+        "docs/architecture/08_01_operational_concept.md",
+        "docs/architecture/08_02_development_concept.md",
+        "docs/architecture/08_03_security_concept.md",
+        "docs/architecture/08_concepts.md",
+        "docs/architecture/09_quality_requirements.md",
+        "docs/architecture/Index.md",
+        "docs/architecture/authentication/authentication.md",
+        "docs/architecture/database/db-view.md",
+        "docs/architecture/database/seeding.md"
       ]
     },
     "paths": [
-      "docs/getting-started.md",
-      "docs/metadata_file.md",
-      "docs/open-refinement-and-planning.md",
-      "docs/planning.md",
-      "docs/product_release.md",
-      "docs/static/releasemanagement-acceptance-happy-path.mmd",
-      "docs/static/releasemanagement-acceptance-happy-path.svg",
-      "docs/static/releasemanagement-acceptance-other-path.mmd",
-      "docs/static/releasemanagement-acceptance-other-path.svg",
-      "docs/tractus-x-release.md"
+      "docs/README.md",
+      "docs/admin/Admin_Guide.md",
+      "docs/admin/add-policies/add-policies.md",
+      "docs/admin/dev-process/Dev-flow_deploy-dev-env.md",
+      "docs/admin/dev-process/Dev-flow_git-diagram.md",
+      "docs/admin/dev-process/Enumeration Handling.md",
+      "docs/admin/dev-process/How to contribute.md",
+      "docs/admin/known-issues-and-limitations.md",
+      "docs/admin/release-process/Release Process.md",
+      "docs/api/API_Doc.md",
+      "docs/api/hub-service.yaml",
+      "docs/api/postman/example-requests.md",
+      "docs/api/postman/policy-hub.postman_collection.json",
+      "docs/architecture/02_architecture_constraints.md",
+      "docs/architecture/03_system_scope_and_context.md",
+      "docs/architecture/04_solution_strategy.md",
+      "docs/architecture/05_building_block_view.md",
+      "docs/architecture/08_01_operational_concept.md",
+      "docs/architecture/08_02_development_concept.md",
+      "docs/architecture/08_03_security_concept.md",
+      "docs/architecture/08_concepts.md",
+      "docs/architecture/09_quality_requirements.md",
+      "docs/architecture/Index.md",
+      "docs/architecture/authentication/authentication.md",
+      "docs/architecture/database/db-view.md",
+      "docs/architecture/database/seeding.md"
     ]
   },
-  "eclipse-tractusx.github.io.largefiles": {
+  "tractusx-edc-template": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
+  },
+  "sldt-ontology-model": {
+    "branch": "main",
+    "groups": {
+      "docs/asset_taxonomy.md": [
+        "docs/asset_taxonomy.md"
+      ],
+      "docs/behaviour_ontology.md": [
+        "docs/behaviour_ontology.md"
+      ],
+      "docs/bill-of-material_ontology.md": [
+        "docs/bill-of-material_ontology.md"
+      ],
+      "docs/common_ontology.md": [
+        "docs/common_ontology.md"
+      ],
+      "docs/core_ontology.md": [
+        "docs/core_ontology.md"
+      ],
+      "docs/core_taxonomy.md": [
+        "docs/core_taxonomy.md"
+      ],
+      "docs/function_ontology.md": [
+        "docs/function_ontology.md"
+      ],
+      "docs/ontology_governance_process.md": [
+        "docs/ontology_governance_process.md"
+      ],
+      "docs/reliability_ontology.md": [
+        "docs/reliability_ontology.md"
+      ],
+      "docs/supply-chain_ontology.md": [
+        "docs/supply-chain_ontology.md"
+      ],
+      "docs/vehicle_ontology.md": [
+        "docs/vehicle_ontology.md"
+      ]
+    },
+    "paths": [
+      "docs/asset_taxonomy.md",
+      "docs/behaviour_ontology.md",
+      "docs/bill-of-material_ontology.md",
+      "docs/common_ontology.md",
+      "docs/core_ontology.md",
+      "docs/core_taxonomy.md",
+      "docs/function_ontology.md",
+      "docs/ontology_governance_process.md",
+      "docs/reliability_ontology.md",
+      "docs/supply-chain_ontology.md",
+      "docs/vehicle_ontology.md"
+    ]
+  },
+  "ssi-authority-schema-registry": {
+    "branch": "main",
+    "groups": {
+      "docs/README.md": [
+        "docs/README.md"
+      ],
+      "docs/admin": [
+        "docs/admin/Admin_Guide.md",
+        "docs/admin/db-view.md",
+        "docs/admin/dev-process/Dev-flow_deploy-dev-env.md",
+        "docs/admin/dev-process/Dev-flow_git-diagram.md",
+        "docs/admin/dev-process/Enumeration Handling.md",
+        "docs/admin/dev-process/FILEHEADER.md",
+        "docs/admin/dev-process/How to contribute.md",
+        "docs/admin/release-process/Release Process.md",
+        "docs/admin/seeding.md"
+      ],
+      "docs/api": [
+        "docs/api/API_Doc.md",
+        "docs/api/asr-service.yaml",
+        "docs/api/postman/Org.Eclipse.TractusX.SsiAuthoritySchemaRegistry.Service.postman_collection.json"
+      ],
+      "docs/architecture": [
+        "docs/architecture/02_architecture_constraints.md",
+        "docs/architecture/03_system_scope_and_context.md",
+        "docs/architecture/04_solution_strategy.md",
+        "docs/architecture/05_building_block_view.md",
+        "docs/architecture/08_01_operational_concept.md",
+        "docs/architecture/08_02_development_concept.md",
+        "docs/architecture/08_03_security_concept.md",
+        "docs/architecture/08_concepts.md",
+        "docs/architecture/10_quality_requirements.md",
+        "docs/architecture/12_glossary.md",
+        "docs/architecture/13_Migration.md",
+        "docs/architecture/Index.md"
+      ]
+    },
+    "paths": [
+      "docs/README.md",
+      "docs/admin/Admin_Guide.md",
+      "docs/admin/db-view.md",
+      "docs/admin/dev-process/Dev-flow_deploy-dev-env.md",
+      "docs/admin/dev-process/Dev-flow_git-diagram.md",
+      "docs/admin/dev-process/Enumeration Handling.md",
+      "docs/admin/dev-process/FILEHEADER.md",
+      "docs/admin/dev-process/How to contribute.md",
+      "docs/admin/release-process/Release Process.md",
+      "docs/admin/seeding.md",
+      "docs/api/API_Doc.md",
+      "docs/api/asr-service.yaml",
+      "docs/api/postman/Org.Eclipse.TractusX.SsiAuthoritySchemaRegistry.Service.postman_collection.json",
+      "docs/architecture/02_architecture_constraints.md",
+      "docs/architecture/03_system_scope_and_context.md",
+      "docs/architecture/04_solution_strategy.md",
+      "docs/architecture/05_building_block_view.md",
+      "docs/architecture/08_01_operational_concept.md",
+      "docs/architecture/08_02_development_concept.md",
+      "docs/architecture/08_03_security_concept.md",
+      "docs/architecture/08_concepts.md",
+      "docs/architecture/10_quality_requirements.md",
+      "docs/architecture/12_glossary.md",
+      "docs/architecture/13_Migration.md",
+      "docs/architecture/Index.md"
+    ]
+  },
+  "api-hub": {
     "branch": "main",
     "groups": {},
     "paths": []
@@ -4426,209 +4629,6 @@
       "docs/user/img/transfers_view_list.png.license"
     ]
   },
-  "tractusx-profiles": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
-  },
-  "policy-hub": {
-    "branch": "main",
-    "groups": {
-      "docs/README.md": [
-        "docs/README.md"
-      ],
-      "docs/admin": [
-        "docs/admin/Admin_Guide.md",
-        "docs/admin/add-policies/add-policies.md",
-        "docs/admin/dev-process/Dev-flow_deploy-dev-env.md",
-        "docs/admin/dev-process/Dev-flow_git-diagram.md",
-        "docs/admin/dev-process/Enumeration Handling.md",
-        "docs/admin/dev-process/How to contribute.md",
-        "docs/admin/known-issues-and-limitations.md",
-        "docs/admin/release-process/Release Process.md"
-      ],
-      "docs/api": [
-        "docs/api/API_Doc.md",
-        "docs/api/hub-service.yaml",
-        "docs/api/postman/example-requests.md",
-        "docs/api/postman/policy-hub.postman_collection.json"
-      ],
-      "docs/architecture": [
-        "docs/architecture/02_architecture_constraints.md",
-        "docs/architecture/03_system_scope_and_context.md",
-        "docs/architecture/04_solution_strategy.md",
-        "docs/architecture/05_building_block_view.md",
-        "docs/architecture/08_01_operational_concept.md",
-        "docs/architecture/08_02_development_concept.md",
-        "docs/architecture/08_03_security_concept.md",
-        "docs/architecture/08_concepts.md",
-        "docs/architecture/09_quality_requirements.md",
-        "docs/architecture/Index.md",
-        "docs/architecture/authentication/authentication.md",
-        "docs/architecture/database/db-view.md",
-        "docs/architecture/database/seeding.md"
-      ]
-    },
-    "paths": [
-      "docs/README.md",
-      "docs/admin/Admin_Guide.md",
-      "docs/admin/add-policies/add-policies.md",
-      "docs/admin/dev-process/Dev-flow_deploy-dev-env.md",
-      "docs/admin/dev-process/Dev-flow_git-diagram.md",
-      "docs/admin/dev-process/Enumeration Handling.md",
-      "docs/admin/dev-process/How to contribute.md",
-      "docs/admin/known-issues-and-limitations.md",
-      "docs/admin/release-process/Release Process.md",
-      "docs/api/API_Doc.md",
-      "docs/api/hub-service.yaml",
-      "docs/api/postman/example-requests.md",
-      "docs/api/postman/policy-hub.postman_collection.json",
-      "docs/architecture/02_architecture_constraints.md",
-      "docs/architecture/03_system_scope_and_context.md",
-      "docs/architecture/04_solution_strategy.md",
-      "docs/architecture/05_building_block_view.md",
-      "docs/architecture/08_01_operational_concept.md",
-      "docs/architecture/08_02_development_concept.md",
-      "docs/architecture/08_03_security_concept.md",
-      "docs/architecture/08_concepts.md",
-      "docs/architecture/09_quality_requirements.md",
-      "docs/architecture/Index.md",
-      "docs/architecture/authentication/authentication.md",
-      "docs/architecture/database/db-view.md",
-      "docs/architecture/database/seeding.md"
-    ]
-  },
-  "tutorial-resources": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
-  },
-  "ssi-authority-schema-registry": {
-    "branch": "main",
-    "groups": {
-      "docs/README.md": [
-        "docs/README.md"
-      ],
-      "docs/admin": [
-        "docs/admin/Admin_Guide.md",
-        "docs/admin/db-view.md",
-        "docs/admin/dev-process/Dev-flow_deploy-dev-env.md",
-        "docs/admin/dev-process/Dev-flow_git-diagram.md",
-        "docs/admin/dev-process/Enumeration Handling.md",
-        "docs/admin/dev-process/FILEHEADER.md",
-        "docs/admin/dev-process/How to contribute.md",
-        "docs/admin/release-process/Release Process.md",
-        "docs/admin/seeding.md"
-      ],
-      "docs/api": [
-        "docs/api/API_Doc.md",
-        "docs/api/asr-service.yaml",
-        "docs/api/postman/Org.Eclipse.TractusX.SsiAuthoritySchemaRegistry.Service.postman_collection.json"
-      ],
-      "docs/architecture": [
-        "docs/architecture/02_architecture_constraints.md",
-        "docs/architecture/03_system_scope_and_context.md",
-        "docs/architecture/04_solution_strategy.md",
-        "docs/architecture/05_building_block_view.md",
-        "docs/architecture/08_01_operational_concept.md",
-        "docs/architecture/08_02_development_concept.md",
-        "docs/architecture/08_03_security_concept.md",
-        "docs/architecture/08_concepts.md",
-        "docs/architecture/10_quality_requirements.md",
-        "docs/architecture/12_glossary.md",
-        "docs/architecture/13_Migration.md",
-        "docs/architecture/Index.md"
-      ]
-    },
-    "paths": [
-      "docs/README.md",
-      "docs/admin/Admin_Guide.md",
-      "docs/admin/db-view.md",
-      "docs/admin/dev-process/Dev-flow_deploy-dev-env.md",
-      "docs/admin/dev-process/Dev-flow_git-diagram.md",
-      "docs/admin/dev-process/Enumeration Handling.md",
-      "docs/admin/dev-process/FILEHEADER.md",
-      "docs/admin/dev-process/How to contribute.md",
-      "docs/admin/release-process/Release Process.md",
-      "docs/admin/seeding.md",
-      "docs/api/API_Doc.md",
-      "docs/api/asr-service.yaml",
-      "docs/api/postman/Org.Eclipse.TractusX.SsiAuthoritySchemaRegistry.Service.postman_collection.json",
-      "docs/architecture/02_architecture_constraints.md",
-      "docs/architecture/03_system_scope_and_context.md",
-      "docs/architecture/04_solution_strategy.md",
-      "docs/architecture/05_building_block_view.md",
-      "docs/architecture/08_01_operational_concept.md",
-      "docs/architecture/08_02_development_concept.md",
-      "docs/architecture/08_03_security_concept.md",
-      "docs/architecture/08_concepts.md",
-      "docs/architecture/10_quality_requirements.md",
-      "docs/architecture/12_glossary.md",
-      "docs/architecture/13_Migration.md",
-      "docs/architecture/Index.md"
-    ]
-  },
-  "sldt-ontology-model": {
-    "branch": "main",
-    "groups": {
-      "docs/asset_taxonomy.md": [
-        "docs/asset_taxonomy.md"
-      ],
-      "docs/behaviour_ontology.md": [
-        "docs/behaviour_ontology.md"
-      ],
-      "docs/bill-of-material_ontology.md": [
-        "docs/bill-of-material_ontology.md"
-      ],
-      "docs/common_ontology.md": [
-        "docs/common_ontology.md"
-      ],
-      "docs/core_ontology.md": [
-        "docs/core_ontology.md"
-      ],
-      "docs/core_taxonomy.md": [
-        "docs/core_taxonomy.md"
-      ],
-      "docs/function_ontology.md": [
-        "docs/function_ontology.md"
-      ],
-      "docs/ontology_governance_process.md": [
-        "docs/ontology_governance_process.md"
-      ],
-      "docs/reliability_ontology.md": [
-        "docs/reliability_ontology.md"
-      ],
-      "docs/supply-chain_ontology.md": [
-        "docs/supply-chain_ontology.md"
-      ],
-      "docs/vehicle_ontology.md": [
-        "docs/vehicle_ontology.md"
-      ]
-    },
-    "paths": [
-      "docs/asset_taxonomy.md",
-      "docs/behaviour_ontology.md",
-      "docs/bill-of-material_ontology.md",
-      "docs/common_ontology.md",
-      "docs/core_ontology.md",
-      "docs/core_taxonomy.md",
-      "docs/function_ontology.md",
-      "docs/ontology_governance_process.md",
-      "docs/reliability_ontology.md",
-      "docs/supply-chain_ontology.md",
-      "docs/vehicle_ontology.md"
-    ]
-  },
-  "api-hub": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
-  },
-  "tractusx-edc-template": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
-  },
   "bpn-did-resolution-service": {
     "branch": "main",
     "groups": {
@@ -4721,94 +4721,6 @@
       "docs/architecture/database/seeding.md"
     ]
   },
-  "tractusx-edc-compatibility-tests": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
-  },
-  "ssi-dim-wallet-stub": {
-    "branch": "main",
-    "groups": {
-      "docs/README.md": [
-        "docs/README.md"
-      ],
-      "docs/admin": [
-        "docs/admin/Dev Process/Dev-flow_git-diagram.md",
-        "docs/admin/Dev Process/How to contribute.md",
-        "docs/admin/integration/integration.md"
-      ],
-      "docs/api": [
-        "docs/api/openAPI.json"
-      ],
-      "docs/architecture": [
-        "docs/architecture/images/1.png",
-        "docs/architecture/images/2.png",
-        "docs/architecture/images/3.png",
-        "docs/architecture/images/4.png",
-        "docs/architecture/images/5.png",
-        "docs/architecture/images/6.png",
-        "docs/architecture/images/7.png",
-        "docs/architecture/images/8.png",
-        "docs/architecture/images/9.png",
-        "docs/architecture/images/did.png",
-        "docs/architecture/images/directory_api.png",
-        "docs/architecture/images/get_creds.png",
-        "docs/architecture/images/get_requested_credentials.png",
-        "docs/architecture/images/get_status_of_requested_credentials.png",
-        "docs/architecture/images/interfaces.png",
-        "docs/architecture/images/issue_cred.png",
-        "docs/architecture/images/issuer_metadata.png",
-        "docs/architecture/images/quality_tree.png",
-        "docs/architecture/images/query.png",
-        "docs/architecture/images/request_credential.png",
-        "docs/architecture/images/setup-dim.png",
-        "docs/architecture/images/sign_cred.png",
-        "docs/architecture/images/status_list.png",
-        "docs/architecture/images/sts.png",
-        "docs/architecture/images/system_scope.png",
-        "docs/architecture/images/tech-user.png",
-        "docs/architecture/images/update_did_document_service.png",
-        "docs/architecture/images/use_case.png",
-        "docs/architecture/main.md"
-      ]
-    },
-    "paths": [
-      "docs/README.md",
-      "docs/admin/Dev Process/Dev-flow_git-diagram.md",
-      "docs/admin/Dev Process/How to contribute.md",
-      "docs/admin/integration/integration.md",
-      "docs/api/openAPI.json",
-      "docs/architecture/images/1.png",
-      "docs/architecture/images/2.png",
-      "docs/architecture/images/3.png",
-      "docs/architecture/images/4.png",
-      "docs/architecture/images/5.png",
-      "docs/architecture/images/6.png",
-      "docs/architecture/images/7.png",
-      "docs/architecture/images/8.png",
-      "docs/architecture/images/9.png",
-      "docs/architecture/images/did.png",
-      "docs/architecture/images/directory_api.png",
-      "docs/architecture/images/get_creds.png",
-      "docs/architecture/images/get_requested_credentials.png",
-      "docs/architecture/images/get_status_of_requested_credentials.png",
-      "docs/architecture/images/interfaces.png",
-      "docs/architecture/images/issue_cred.png",
-      "docs/architecture/images/issuer_metadata.png",
-      "docs/architecture/images/quality_tree.png",
-      "docs/architecture/images/query.png",
-      "docs/architecture/images/request_credential.png",
-      "docs/architecture/images/setup-dim.png",
-      "docs/architecture/images/sign_cred.png",
-      "docs/architecture/images/status_list.png",
-      "docs/architecture/images/sts.png",
-      "docs/architecture/images/system_scope.png",
-      "docs/architecture/images/tech-user.png",
-      "docs/architecture/images/update_did_document_service.png",
-      "docs/architecture/images/use_case.png",
-      "docs/architecture/main.md"
-    ]
-  },
   "sig-architecture": {
     "branch": "main",
     "groups": {
@@ -4896,48 +4808,93 @@
       "docs/white-papers/multiple-wallet-providers-and-bring-your-own-wallet/media/revocation.png.license"
     ]
   },
-  "tractusx-sdk": {
+  "ssi-dim-wallet-stub": {
     "branch": "main",
     "groups": {
+      "docs/README.md": [
+        "docs/README.md"
+      ],
+      "docs/admin": [
+        "docs/admin/Dev Process/Dev-flow_git-diagram.md",
+        "docs/admin/Dev Process/How to contribute.md",
+        "docs/admin/integration/integration.md"
+      ],
+      "docs/api": [
+        "docs/api/openAPI.json"
+      ],
       "docs/architecture": [
-        "docs/architecture/.adr-dir",
-        "docs/architecture/decision-records/0001-record-architecture-decisions.md",
-        "docs/architecture/decision-records/0002-data-storage-architecture.md",
-        "docs/architecture/decision-records/0003-sdk-module-architecture.md",
-        "docs/architecture/decision-records/0004-tractusx-sdk-services.md"
-      ],
-      "docs/media": [
-        "docs/media/catena-x-speedway-sdk.svg",
-        "docs/media/catena-x-speedway-sdk.svg.license",
-        "docs/media/modular-microservices-architecture.svg",
-        "docs/media/modular-microservices-architecture.svg.license",
-        "docs/media/sdk-context.png",
-        "docs/media/sdk-context.png.license"
-      ],
-      "docs/user": [
-        "docs/user/README.md",
-        "docs/user/usage/dataspace/edc-sdk-usage.md",
-        "docs/user/usage/industry/dtr-sdk-usage.md",
-        "docs/user/usage/industry/submodel-service-sdk-usage.md"
+        "docs/architecture/images/1.png",
+        "docs/architecture/images/2.png",
+        "docs/architecture/images/3.png",
+        "docs/architecture/images/4.png",
+        "docs/architecture/images/5.png",
+        "docs/architecture/images/6.png",
+        "docs/architecture/images/7.png",
+        "docs/architecture/images/8.png",
+        "docs/architecture/images/9.png",
+        "docs/architecture/images/did.png",
+        "docs/architecture/images/directory_api.png",
+        "docs/architecture/images/get_creds.png",
+        "docs/architecture/images/get_requested_credentials.png",
+        "docs/architecture/images/get_status_of_requested_credentials.png",
+        "docs/architecture/images/interfaces.png",
+        "docs/architecture/images/issue_cred.png",
+        "docs/architecture/images/issuer_metadata.png",
+        "docs/architecture/images/quality_tree.png",
+        "docs/architecture/images/query.png",
+        "docs/architecture/images/request_credential.png",
+        "docs/architecture/images/setup-dim.png",
+        "docs/architecture/images/sign_cred.png",
+        "docs/architecture/images/status_list.png",
+        "docs/architecture/images/sts.png",
+        "docs/architecture/images/system_scope.png",
+        "docs/architecture/images/tech-user.png",
+        "docs/architecture/images/update_did_document_service.png",
+        "docs/architecture/images/use_case.png",
+        "docs/architecture/main.md"
       ]
     },
     "paths": [
-      "docs/architecture/.adr-dir",
-      "docs/architecture/decision-records/0001-record-architecture-decisions.md",
-      "docs/architecture/decision-records/0002-data-storage-architecture.md",
-      "docs/architecture/decision-records/0003-sdk-module-architecture.md",
-      "docs/architecture/decision-records/0004-tractusx-sdk-services.md",
-      "docs/media/catena-x-speedway-sdk.svg",
-      "docs/media/catena-x-speedway-sdk.svg.license",
-      "docs/media/modular-microservices-architecture.svg",
-      "docs/media/modular-microservices-architecture.svg.license",
-      "docs/media/sdk-context.png",
-      "docs/media/sdk-context.png.license",
-      "docs/user/README.md",
-      "docs/user/usage/dataspace/edc-sdk-usage.md",
-      "docs/user/usage/industry/dtr-sdk-usage.md",
-      "docs/user/usage/industry/submodel-service-sdk-usage.md"
+      "docs/README.md",
+      "docs/admin/Dev Process/Dev-flow_git-diagram.md",
+      "docs/admin/Dev Process/How to contribute.md",
+      "docs/admin/integration/integration.md",
+      "docs/api/openAPI.json",
+      "docs/architecture/images/1.png",
+      "docs/architecture/images/2.png",
+      "docs/architecture/images/3.png",
+      "docs/architecture/images/4.png",
+      "docs/architecture/images/5.png",
+      "docs/architecture/images/6.png",
+      "docs/architecture/images/7.png",
+      "docs/architecture/images/8.png",
+      "docs/architecture/images/9.png",
+      "docs/architecture/images/did.png",
+      "docs/architecture/images/directory_api.png",
+      "docs/architecture/images/get_creds.png",
+      "docs/architecture/images/get_requested_credentials.png",
+      "docs/architecture/images/get_status_of_requested_credentials.png",
+      "docs/architecture/images/interfaces.png",
+      "docs/architecture/images/issue_cred.png",
+      "docs/architecture/images/issuer_metadata.png",
+      "docs/architecture/images/quality_tree.png",
+      "docs/architecture/images/query.png",
+      "docs/architecture/images/request_credential.png",
+      "docs/architecture/images/setup-dim.png",
+      "docs/architecture/images/sign_cred.png",
+      "docs/architecture/images/status_list.png",
+      "docs/architecture/images/sts.png",
+      "docs/architecture/images/system_scope.png",
+      "docs/architecture/images/tech-user.png",
+      "docs/architecture/images/update_did_document_service.png",
+      "docs/architecture/images/use_case.png",
+      "docs/architecture/main.md"
     ]
+  },
+  "tractusx-edc-compatibility-tests": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
   },
   "industry-core-hub": {
     "branch": "main",
@@ -5126,6 +5083,60 @@
       "docs/umbrella/umbrella-deployment-guide.md"
     ]
   },
+  "tractusx-sdk": {
+    "branch": "main",
+    "groups": {
+      "docs/architecture": [
+        "docs/architecture/.adr-dir",
+        "docs/architecture/decision-records/0001-record-architecture-decisions.md",
+        "docs/architecture/decision-records/0002-data-storage-architecture.md",
+        "docs/architecture/decision-records/0003-sdk-module-architecture.md",
+        "docs/architecture/decision-records/0004-tractusx-sdk-services.md"
+      ],
+      "docs/media": [
+        "docs/media/catena-x-speedway-sdk.svg",
+        "docs/media/catena-x-speedway-sdk.svg.license",
+        "docs/media/modular-microservices-architecture.svg",
+        "docs/media/modular-microservices-architecture.svg.license",
+        "docs/media/sdk-context.png",
+        "docs/media/sdk-context.png.license"
+      ],
+      "docs/user": [
+        "docs/user/README.md",
+        "docs/user/usage/dataspace/edc-sdk-usage.md",
+        "docs/user/usage/industry/dtr-sdk-usage.md",
+        "docs/user/usage/industry/submodel-service-sdk-usage.md"
+      ]
+    },
+    "paths": [
+      "docs/architecture/.adr-dir",
+      "docs/architecture/decision-records/0001-record-architecture-decisions.md",
+      "docs/architecture/decision-records/0002-data-storage-architecture.md",
+      "docs/architecture/decision-records/0003-sdk-module-architecture.md",
+      "docs/architecture/decision-records/0004-tractusx-sdk-services.md",
+      "docs/media/catena-x-speedway-sdk.svg",
+      "docs/media/catena-x-speedway-sdk.svg.license",
+      "docs/media/modular-microservices-architecture.svg",
+      "docs/media/modular-microservices-architecture.svg.license",
+      "docs/media/sdk-context.png",
+      "docs/media/sdk-context.png.license",
+      "docs/user/README.md",
+      "docs/user/usage/dataspace/edc-sdk-usage.md",
+      "docs/user/usage/industry/dtr-sdk-usage.md",
+      "docs/user/usage/industry/submodel-service-sdk-usage.md"
+    ]
+  },
+  "aas-suite": {
+    "branch": "main",
+    "groups": {
+      "docs/media": [
+        "docs/media/logo-tmp.png"
+      ]
+    },
+    "paths": [
+      "docs/media/logo-tmp.png"
+    ]
+  },
   "tractusx-edc-kafka-extension": {
     "branch": "main",
     "groups": {
@@ -5175,17 +5186,17 @@
       "docs/concepts/MVP-kafka-pull/puml/Sequence diagram EDC Kafka Extension suspending-terminating.puml"
     ]
   },
+  "tractusx-sdk-services": {
+    "branch": "main",
+    "groups": {},
+    "paths": []
+  },
   "tractusx-issuerservice": {
     "branch": "main",
     "groups": {},
     "paths": []
   },
   "tractusx-identityhub": {
-    "branch": "main",
-    "groups": {},
-    "paths": []
-  },
-  "tractusx-sdk-services": {
     "branch": "main",
     "groups": {},
     "paths": []

@@ -108,27 +108,51 @@ def write_index_and_viewer(out_dir: str, org: str):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Índice de documentación — Tractus-X</title>
 <style>
-body{{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:2rem;background:#0b1020;color:#e5e7eb}}
+:root{{
+    --bg:#0b1020; --fg:#e5e7eb; --link:#8ab4f8; --border:#243148; --card:#12182c; --muted:#a3a3a3; --badge:#0b1020; --codebg:#0f172a;
+}}
+:root[data-theme="light"]{{
+    --bg:#ffffff; --fg:#0f172a; --link:#1a56db; --border:#e5e7eb; --card:#f8fafc; --muted:#6b7280; --badge:#f1f5f9; --codebg:#f3f4f6;
+}}
+*{{box-sizing:border-box}}
+body{{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:2rem;background:var(--bg);color:var(--fg)}}
 h1{{margin-bottom:1rem}}
-.repo{{margin:0 0 1.25rem;padding:1rem;border:1px solid #243148;border-radius:12px;background:#12182c}}
-a{{color:#8ab4f8;text-decoration:none}}a:hover{{text-decoration:underline}}
+.repo{{margin:0 0 1.25rem;padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--card)}}
+a{{color:var(--link);text-decoration:none}}
+a:hover{{text-decoration:underline}}
 ul{{margin:.25rem 0 .75rem 1.25rem}}
-small{{color:#a3a3a3}}
-.badge{{display:inline-block;border:1px solid #243148;border-radius:8px;padding:.1rem .5rem;margin-left:.5rem;color:#cbd5e1;background:#0b1020}}
-#q{{background:#0b1020;border:1px solid #243148;border-radius:8px;padding:.5rem .75rem;color:#e5e7eb;width:100%;max-width:480px}}
+small{{color:var(--muted)}}
+.badge{{display:inline-block;border:1px solid var(--border);border-radius:8px;padding:.1rem .5rem;margin-left:.5rem;color:#334155;background:var(--badge)}}
+#q{{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.5rem .75rem;color:var(--fg);width:100%;max-width:480px; margin:0 0 1.25rem}}
 .group{{margin:.5rem 0 .25rem;font-weight:600;color:#e2e8f0}}
 .file{{font-size:.95rem}}
-.btn{{border:1px solid #243148;border-radius:8px;background:#0b1020;color:#e5e7eb;padding:.15rem .4rem;cursor:pointer}}
+.btn{{border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);padding:.15rem .4rem;cursor:pointer}}
 ul.tree{{list-style:none;margin:.25rem 0 .25rem .25rem;padding-left:.5rem}}
 li.dir{{margin:.15rem 0}}
 li.file{{margin:.1rem 0}}
 .header{{display:flex;align-items:center;gap:.35rem}}
+#themeToggle{{
+    position:fixed; top:16px; right:16px; z-index:10;
+  border:1px solid var(--border); background:var(--bg); color:var(--link);
+  border-radius:10px; padding:.45rem .7rem; cursor:pointer;
+}}
 </style>
-<h1>Índice de documentación — Tractus-X</h1>
+<h1>Índice de documentación — Tractus-X</h1> <button id="themeToggle" aria-label="Cambiar tema">☀️ Modo blanco</button>
+
 <p><small>Org: {org}. Generado en modo {'rápido' if FAST_MODE else 'completo'}.</small></p>
 <input id="q" type="search" placeholder="Filtrar por repo, carpeta o fichero…" autocomplete="off"/>
 <div id="list"></div>
 <script>
+const applyTheme = (t) => document.documentElement.setAttribute('data-theme', t);
+const saved = localStorage.getItem('theme') || 'dark';
+applyTheme(saved);
+const btn = document.getElementById('themeToggle');
+const updateBtn = () => {{ btn.textContent = (document.documentElement.getAttribute('data-theme')==='light') ? '🌙 Modo oscuro' : '☀️ Modo blanco'; }};
+updateBtn();
+btn.onclick = () => {{
+    const now = document.documentElement.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+  applyTheme(now); localStorage.setItem('theme', now); updateBtn();
+}};
 (async () => {{
   const res = await fetch('tree.json');
   const tree = await res.json();
@@ -157,11 +181,12 @@ li.file{{margin:.1rem 0}}
 
   // Crea enlaces respetando .md/.mdx con visor local
   function linkFor(org, repo, branch, fullPath) {{
+   const encPath = fullPath.split('/').map(encodeURIComponent).join('/');
    const fileParam =
     `/raw/${{encodeURIComponent(org)}}` +
     `/${{encodeURIComponent(repo)}}` +
     `/${{encodeURIComponent(branch)}}` +
-    `/${{encodeURI(fullPath)}}`;
+    `/${{encPath}}`;
     if (/\\.(md|mdx)$/i.test(fullPath)) {{
       return `viewer.html?file=${{fileParam}}`;
     }}
@@ -276,50 +301,64 @@ li.file{{margin:.1rem 0}}
                        <!-- Mermaid para bloques ```mermaid -->
                        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
                        <style>
-                         body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Noto Color Emoji;margin:2rem;line-height:1.6;background:#0b1020;color:#e5e7eb}
-                         a{color:#8ab4f8}
-                         pre,code{background:#0f172a;color:#e5e7eb;border-radius:6px}
-                         pre{padding:1rem;overflow:auto}
-                         code{padding:0.15rem 0.35rem}
-                         h1,h2,h3,h4{margin-top:1.2em}
-                         img{max-width:100%; height:auto}
-                         table{border-collapse:collapse;width:100%;overflow:auto;display:block}
-                         th,td{border:1px solid #334155;padding:6px}
-                         .path{color:#9aa4b2;margin-bottom:1rem;word-break:break-all}
-                         .error{color:#fca5a5}
-                         .back {
-                          display: inline-block;
-                          background: #1e293b;
-                          color: #8ab4f8;
-                          border: 1px solid #243148;
-                          border-radius: 8px;
-                          padding: 0.5rem 1rem;
-                          font-size: 0.95rem;
-                          cursor: pointer;
-                          transition: background 0.2s, transform 0.1s;
-                        }
-                        
-                        .back:hover {
-                          background: #2a3b54;
-                          transform: translateY(-1px);
-                        }
-                        
-                        .back:active {
-                          transform: translateY(0);
-                        }
+                         :root{
+                              --bg:#0b1020; --fg:#e5e7eb; --link:#8ab4f8; --border:#243148; --card:#12182c; --muted:#a3a3a3; --codebg:#0f172a;
+                            }
+                            :root[data-theme="light"]{
+                              --bg:#ffffff; --fg:#0f172a; --link:#1a56db; --border:#e5e7eb; --card:#f8fafc; --muted:#6b7280; --codebg:#f3f4f6;
+                            }
+                            *{box-sizing:border-box}
+                            body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Noto Color Emoji;margin:2rem;line-height:1.6;background:var(--bg);color:var(--fg)}
+                            a{color:var(--link)}
+                            pre,code{background:var(--codebg);color:var(--fg);border-radius:6px}
+                            pre{padding:1rem;overflow:auto}
+                            code{padding:0.15rem 0.35rem}
+                            h1,h2,h3,h4{margin-top:1.2em}
+                            img{max-width:100%; height:auto}
+                            table{border-collapse:collapse;width:100%;overflow:auto;display:block}
+                            th,td{border:1px solid var(--border);padding:6px}
+                            .path{color:var(--muted);margin-bottom:1rem;word-break:break-all}
+                            .error{color:#fca5a5}
+                            .back{display:inline-block;background:var(--card);color:var(--link);border:1px solid var(--border);border-radius:8px;padding:.5rem 1rem;font-size:.95rem;cursor:pointer;transition:background .2s,transform .1s}
+                            .back:hover{transform:translateY(-1px)}
+                            .back:active{transform:translateY(0)}
+                            #themeToggle{
+                              position:fixed; top:16px; right:16px; z-index:10;
+                              border:1px solid var(--border); background:var(--bg); color:var(--link);
+                              border-radius:10px; padding:.45rem .7rem; cursor:pointer;
+                            }
                        </style>
                      </head>
                      <body>
-                       <button class="back" onclick="window.location.href='index.html'">← Volver al índice</button>
+                       <button class="back" onclick="window.location.href='index.html'">← Volver al índice</button> <button id="themeToggle" aria-label="Cambiar tema">☀️ Modo blanco</button>
+
                        <div class="path" id="mdpath"></div>
                        <article id="content">Cargando…</article>
 
                        <script>
+                        const applyTheme = (t) => document.documentElement.setAttribute('data-theme', t);
+                        const saved = localStorage.getItem('theme') || 'dark';
+                        applyTheme(saved);
+                        const btn = document.getElementById('themeToggle');
+                        const updateBtn = () => { btn.textContent = (document.documentElement.getAttribute('data-theme')==='light') ? '🌙 Modo oscuro' : '☀️ Modo blanco'; };
+                        updateBtn();
+                        btn.onclick = () => {
+                          const now = document.documentElement.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+                          applyTheme(now); localStorage.setItem('theme', now); updateBtn();
+                        };
                        const esc = s => s.replace(/[&<>"]/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
                        function md2html(md){
                          // 1) Mermaid: bloques ```mermaid ... ```
                          md = md.replace(/```mermaid\s*([\s\S]*?)```/g, (_,code)=>`<div class="mermaid">${code}</div>`);
+                         
+                         md = md.replace(/(```|~~~)[ \t]*mermaid[ \t]*\n([\s\S]*?)\1/gi, (_, fence, code) => {
+                        return `<div class="mermaid">${code}</div>`;
+                        });
+                        
+                        md = md.replace(/(```|~~~)(?![ \t]*mermaid)([^\n]*)\n([\s\S]*?)\1/g, (_, fence, lang, code) => {
+                        return `<pre><code>${esc(code)}</code></pre>`;
+                        });
 
                          // 2) Código normal con triple backticks
                          md = md.replace(/```([\s\S]*?)```/g, (_,code)=>`<pre><code>${esc(code)}</code></pre>`);
@@ -373,46 +412,49 @@ li.file{{margin:.1rem 0}}
 
                        // Resuelve URLs relativas; si apuntan a carpeta, envía a README.md (fallback index.md)
                        function resolveRelativeUrls(container, basePath){
+                         const toRawPath = (p) => p.split('/').map(encodeURIComponent).join('/');
                          const baseDir = basePath.substring(0, basePath.lastIndexOf('/')+1);
                          const isHttp = u => /^(https?:)?\/\//i.test(u);
                          const hasExt = seg => /\.[a-z0-9]+$/i.test(seg);
 
-                         const fixLink = (a)=>{
-                           let href = a.getAttribute('href');
-                           if(!href) return;
+                         const fixLink = (a) => {
+                              let href = a.getAttribute('href');
+                              if (!href) return;
+                            
+                              if (isHttp(href)) return;
+                            
+                              href = href.replace(/^\.\//, '').replace(/\/{2,}/g,'/');
+                            
+                              if (/\.mdx?$/i.test(href)) {
+                                const raw = baseDir + toRawPath(href);
+                                a.setAttribute('href', 'viewer.html?file=' + raw);
+                                a.setAttribute('target','_self');
+                                return;
+                              }
+                            
+                              const parts = href.split('/');
+                              const last = parts.filter(Boolean).pop() || '';
+                              const looksDir = href.endsWith('/') || !hasExt(last);
+                            
+                              if (looksDir) {
+                                const cand1 = baseDir + toRawPath(href.replace(/\/?$/,'/') + 'README.md');
+                                const cand2 = baseDir + toRawPath(href.replace(/\/?$/,'/') + 'index.md');
+                                a.setAttribute('href', 'viewer.html?file=' + cand1);
+                                a.setAttribute('target','_self');
+                                a.setAttribute('data-fallback', 'viewer.html?file=' + cand2);
+                                return;
+                              }
+                            
+                              a.setAttribute('href', baseDir + toRawPath(href));
+                              a.setAttribute('target','_blank');
+                            };
 
-                           if (isHttp(href)) return;
-
-                           href = href.replace(/^\.\//, '').replace(/\/{2,}/g,'/');
-
-                           if (/\.mdx?$/i.test(href)) {
-                             a.setAttribute('href', 'viewer.html?file=' +  baseDir  + encodeURI(href));
-                             a.setAttribute('target','_self');
-                             return;
-                           }
-
-                           const parts = href.split('/');
-                           const last = parts.filter(Boolean).pop() || '';
-                           const looksDir = href.endsWith('/') || !hasExt(last);
-
-                           if (looksDir) {
-                             const cand1 = baseDir + href.replace(/\/?$/,'/') + 'README.md';
-                             const cand2 = baseDir + href.replace(/\/?$/,'/') + 'index.md';
-                             a.setAttribute('href', 'viewer.html?file=' + cand1);
-                             a.setAttribute('target','_self');
-                             a.setAttribute('data-fallback', 'viewer.html?file=' + cand2);
-                             return;
-                           }
-
-                           a.setAttribute('href', baseDir + href);
-                           a.setAttribute('target','_blank');
-                         };
-
-                         container.querySelectorAll('img').forEach(img=>{
-                           const src = img.getAttribute('src');
-                           if(!src || /^(https?:)?\/\//i.test(src)) return;
-                           img.setAttribute('src', baseDir + src.replace(/^\.\//,''));
-                         });
+                         container.querySelectorAll('img').forEach(img => {
+                          const src = img.getAttribute('src');
+                          if (!src || /^(https?:)?\/\//i.test(src)) return;
+                          const fixed = src.replace(/^\.\//,'').replace(/\/{2,}/g,'/');
+                          img.setAttribute('src', baseDir + fixed.split('/').map(encodeURIComponent).join('/'));
+                        });
 
                          container.querySelectorAll('a').forEach(a=>fixLink(a,'href'));
                        }
@@ -423,34 +465,34 @@ li.file{{margin:.1rem 0}}
                        document.getElementById('mdpath').textContent = file || '';
 
                        if (!file) {
-    document.getElementById('content').innerHTML = '<p>No se indicó archivo (?file=...)</p>';
-  } else {
-    fetch(file)
-      .then(r => {
-        if (!r.ok) throw new Error('No se pudo cargar ' + file + ' (' + r.status + ')');
-        return r.text();
-      })
-      .then(txt => {
-        // console.log("Markdown descargado:", txt.slice(0,200));
-        const html = md2html(txt);
-        const content = document.getElementById('content');
-        content.innerHTML = html;
-        resolveRelativeUrls(content, file);
-
-        if (window.mermaid) {
-          try {
-            mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'loose' });
-            mermaid.run({ querySelector: '.mermaid' });
-          } catch (e) {
-            console.error('Mermaid error:', e);
-          }
-        }
-      })
-      .catch(e => {
-        const content = document.getElementById('content');
-        content.innerHTML = '<p class="error">Error: ' + (e && e.message ? e.message : e) + '</p>';
-      });
-  }
+                        document.getElementById('content').innerHTML = '<p>No se indicó archivo (?file=...)</p>';
+                      } else {
+                        fetch(file)
+                          .then(r => {
+                            if (!r.ok) throw new Error('No se pudo cargar ' + file + ' (' + r.status + ')');
+                            return r.text();
+                          })
+                          .then(txt => {
+                            // console.log("Markdown descargado:", txt.slice(0,200));
+                            const html = md2html(txt);
+                            const content = document.getElementById('content');
+                            content.innerHTML = html;
+                            resolveRelativeUrls(content, file);
+                    
+                            if (window.mermaid) {
+                              try {
+                                mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'loose' });
+                                mermaid.run({ querySelector: '.mermaid' });
+                              } catch (e) {
+                                console.error('Mermaid error:', e);
+                              }
+                            }
+                          })
+                          .catch(e => {
+                            const content = document.getElementById('content');
+                            content.innerHTML = '<p class="error">Error: ' + (e && e.message ? e.message : e) + '</p>';
+                          });
+                      }
                        </script>
                      </body>
                      </html>
@@ -545,20 +587,38 @@ def tree():
 # Proxy RAW para ver .md e imágenes desde GitHub bajo mismo origen
 @app.get("/raw/<org>/<repo>/<branch>/<path:subpath>")
 def raw_proxy(org: str, repo: str, branch: str, subpath: str):
-    url = f"https://raw.githubusercontent.com/{org}/{repo}/{branch}/{subpath}"
+    import urllib.parse, urllib.error, posixpath
     try:
+        # Quote seguro de cada componente
+        org_q = urllib.parse.quote(org, safe="")
+        repo_q = urllib.parse.quote(repo, safe="")
+        branch_q = urllib.parse.quote(branch, safe="")
+
+        # Normaliza y re-encoda cada segmento del subpath (Flask te lo da decodificado)
+        norm = posixpath.normpath("/" + subpath).lstrip("/")
+        parts = [p for p in norm.split("/") if p not in ("", ".")]
+        if any(p == ".." for p in parts):
+            abort(400)
+        sub_q = "/".join(urllib.parse.quote(p, safe="") for p in parts)
+
+        url = f"https://raw.githubusercontent.com/{org_q}/{repo_q}/{branch_q}/{sub_q}"
         req = urllib.request.Request(url)
+        req.add_header("User-Agent", "tractusx-docs/1.0")
         tok = os.getenv("GITHUB_TOKEN")
         if tok:
             req.add_header("Authorization", f"Bearer {tok}")
+
         with urllib.request.urlopen(req, timeout=30) as r:
             data = r.read()
             ctype = r.headers.get("Content-Type", "application/octet-stream")
-            if subpath.lower().endswith((".md", ".mdx")):
+            if norm.lower().endswith((".md", ".mdx")):
                 ctype = "text/markdown; charset=utf-8"
-            return Response(data, headers={"Content-Type": ctype})
+                return Response(data, headers={"Content-Type": ctype, "Cache-Control": "public, max-age=300"})
+    except urllib.error.HTTPError as e:
+            body = e.read() or str(e)
+            return Response(body, status=e.code)
     except Exception as e:
-        return Response(f"Error fetching raw: {e}", status=502)
+            return Response(f"Error fetching raw: {e}", status=502)
 
 
 # Admin
