@@ -14,7 +14,7 @@ from flask import Flask, send_from_directory, request, Response, render_template
 # ============================
 # Configuración
 # ============================
-OUTPUT_DIR = os.getenv("OUT", "tractusx-docs")
+OUTPUT_DIR = os.getenv("OUT", "build/tractusx")
 INTERVAL_HOURS = int(os.getenv("INTERVAL_HOURS", "24"))
 ADMIN_SECRET = os.getenv("ADMIN_SECRET")  # Protege /run si se define
 ADMIN_FIRST = os.getenv("ADMIN_FIRST", "0") == "1"
@@ -27,6 +27,14 @@ GITHUB_TOKEN_ENV = os.getenv("GITHUB_TOKEN")
 
 app = Flask(__name__)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+FAVICON_SRC = os.path.join(os.path.dirname(__file__), "favicon.ico")
+FAVICON_DST = os.path.join(OUTPUT_DIR, "favicon.ico")
+if os.path.exists(FAVICON_SRC) and not os.path.exists(FAVICON_DST):
+        try:
+            with open(FAVICON_SRC, "rb") as _in, open(FAVICON_DST, "wb") as _out:
+                _out.write(_in.read())
+        except Exception:
+             pass
 
 # ============================
 # Utilidades
@@ -107,6 +115,7 @@ def write_index_and_viewer(out_dir: str, org: str):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Índice de documentación — Tractus-X</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <style>
 :root{{
     --bg:#0b1020; --fg:#e5e7eb; --link:#8ab4f8; --border:#243148; --card:#12182c; --muted:#a3a3a3; --badge:#0b1020; --codebg:#0f172a;
@@ -296,6 +305,7 @@ btn.onclick = () => {{
                      <html lang="es">
                      <head>
                        <meta charset="utf-8">
+                       <link rel="icon" href="favicon.ico" type="image/x-icon">
                        <title>Visor Markdown</title>
                        <meta name="viewport" content="width=device-width, initial-scale=1" />
                        <!-- Mermaid para bloques ```mermaid -->
@@ -639,7 +649,7 @@ button{cursor:pointer}
 <h1>Admin — Tractus-X Docs</h1>
 <div class=card>
   <form method=post action="/run">
-    <label>Token GitHub (opcional; no se guarda)</label>
+    <label>Token GitHub (no se guarda)</label>
     <input type=password name=token placeholder="ghp_…">
     {% if require_secret %}
     <label>Admin secret</label>
